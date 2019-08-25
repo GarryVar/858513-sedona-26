@@ -564,11 +564,8 @@ body {
 .sort__row {
   display: flex;
   align-items: center;
-  min-height: 86px;
 }
-.filter__sort {
-  width: 100%;
-}
+
 .sort__text {
   font-family: 'PT Sans Bold';
   font-size: 21px;
