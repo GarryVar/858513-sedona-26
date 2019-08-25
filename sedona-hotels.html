@@ -13,37 +13,38 @@
   <div class="page">
     <!-- header -->
     <header class="header">
+      <div class="container">
+              <!-- logo -->
+        <a class="header__logo" href="index.html">
+          <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
+        </a>
+        <!-- /logo -->
 
-      <!-- logo -->
-      <a class="header__logo" href="index.html">
-        <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
-      </a>
-      <!-- /logo -->
+        <!-- nav -->
+        <nav class="nav header__nav">
+          <!-- nav__list -->
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--left-padding" href="">Информация</a>
+            </li>
 
-      <!-- nav -->
-      <nav class="nav header__nav">
-        <!-- nav__list -->
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="">Информация</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Фото и видео</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Фото и видео</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Карта штата</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Карта штата</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--current nav__link--right-padding" href="sedona-hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+          <!-- /nav__list -->
+        </nav>
+        <!-- /nav -->
 
-          <li class="nav__item">
-            <a class="nav__link nav__link--current" href="sedona-hotels.html">Гостиницы</a>
-          </li>
-        </ul>
-        <!-- /nav__list -->
-      </nav>
-      <!-- /nav -->
-
+      </div>
     </header>
     <!-- /header -->
 
@@ -53,8 +54,10 @@
       <div class="filter main__filter">
         <!-- filter__form -->
         <form class="filter__form" action=".php">
-          <!-- row -->
+          
           <div class="filter__content">
+
+            <!-- row -->
             <div class="filter__row">
               <!-- columns -->
               <div class="filter__column">
@@ -107,46 +110,46 @@
                 </fieldset>
               </div>
 
-              <div class="filter__column">
-                <fieldset class="filter__price filter__selection--type-2">
+              <div class="filter__column price__wrap"> 
+                <fieldset class="price filter__price filter__selection--type-2">
+                  <legend class="price__caption">Стоимость в сутки(p):</legend>
 
-                  <legend class="filter__caption">Стоимость в сутки</legend>
-
-                  <button class="button filter__submit">Показать</button>
                   <label class="visually-hidden" for="cost">Выбор стоимости</label>
                   <input type="range" min="0" max="3000" id="cost" name="cost">
                 </fieldset>
+                <button class="button filter__submit">Показать</button>
               </div>
               <!-- /columns -->
             </div>
+            <!-- /row -->
           </div>
-          <!-- /row -->
+          <!-- /filter__content -->
 
           <!-- row -->
-          <div class="filter__row">
-            <!-- columns -->
-            <div class="filter__column">
-              <fieldset class="sort filter__sort">
+          <div class="sort sort__row">
+             <p class="sort__text"><b>найдено: 3</b></p>
+            <fieldset class="filter__sort">
+
+              <div class="sort__wrap">
                 <legend class="sort__caption">Сортировка</legend>
 
-                <p><b>найдено: 3</b></p>
+              <ul class="sort__list">
+                <li class="sort__item"><a class="sort__link" href="">По цене</a></li>
+                <li class="sort__item"><a class="sort__link" href="">По типу</a></li>
+                <li class="sort__item"><a class="sort__link" href="">По рейтингу</a></li>
+              </ul>
+              <div class="sort__button-group">
+                <button class="button sort__button" type="button" arial-label="По возрастанию"></button>
+                <button class="button sort__button" type="button" arial-label="По убыванию"></button>
+              </div>
+              
 
-                <ul class="sort__list">
-                  <li class="sort__item"><a class="sort__link" href="">По цене</a></li>
-                  <li class="sort__item"><a class="sort__link" href="">По типу</a></li>
-                  <li class="sort__item"><a class="sort__link" href="">По рейтингу</a></li>
-                </ul>
+              </div>
 
-                <button class="button sort__button" type="button">По возрастанию</button>
-                <button class="button sort__button" type="button">По убыванию</button>
-
-              </fieldset>
-            </div>
-            <!-- /columns -->
+            </fieldset>
           </div>
           <!-- /row -->
         </form>
-        <!-- /filter__form -->
       </div>
       <!-- /filter -->
       <!-- hotels -->
@@ -251,15 +254,15 @@
 
         <div class="footer__column">
           <ul class="social-list footer__social-list">
-            <li class="social-list__item">
+            <li class="social-list__item social-list__item--twitter">
               <a class="social-list__link" href="" aria-label="Twitter"></a>
             </li>
 
-            <li class="social-list__item">
-              <a class="social-list__link" href="" aria-label="Vkontakte"></a>
+            <li class="social-list__item social-list__item--fb">
+              <a class="social-list__link" href="" aria-label="Facebook"></a>
             </li>
 
-            <li class="social-list__item">
+            <li class="social-list__item social-list__item--youtube">
               <a class="social-list__link" href="" aria-label="Youtube"></a>
             </li>
 
