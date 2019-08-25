@@ -571,6 +571,7 @@ body {
 }
 
 .sort__type {
+  width: 100%;
   border: none;
 }
 
@@ -593,11 +594,10 @@ body {
 
 .sort__list {
   margin: 0;
-  margin-left: 40px; 
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;;
+    margin-left: 40px;
+    padding: 0;
+    list-style: none;
+    display: flex;
 }
 
 .sort__item {
@@ -614,10 +614,13 @@ body {
 }
 
 .sort__button-group {
+   margin-left: auto;
   display: flex;
 }
 
 .sort__button {
+  margin: 5px;
+  background-color: #bbb;
   width: 10px;
   height: 10px;
 } 
