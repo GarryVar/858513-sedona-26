@@ -561,9 +561,17 @@ body {
 
 /*sort*/
 
+.sort .filter__sort {
+  min-height: 86px;
+}
+
 .sort__row {
   display: flex;
   align-items: center;
+}
+
+.sort__type {
+  border: none;
 }
 
 .sort__text {
