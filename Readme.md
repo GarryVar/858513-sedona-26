@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Igor Varekhov](https://up.htmlacademy.ru/htmlcss/26/user/858513).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Григорьев](https://github.com/fuckhtml).
 
 ---
 
