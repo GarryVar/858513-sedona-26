@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'PT Sans Normal', 'Arial', 'Helvetica', sans-serif;
+}
+
 .page {
   margin: auto;
   background-color: rgb(242, 242, 242);
@@ -30,6 +34,8 @@
   transform: translateX(-50%);
 }
 
+/*NAV*/
+
 .nav__menu {
   display: flex;
   justify-content: space-between;
@@ -39,13 +45,21 @@
 }
 
 .nav__menu-link {
+  font-family: 'PT Sans Bold';
   display: block;
   text-decoration: none;
   text-transform: uppercase;
   padding: 20px 70px;
   font-size: 14px;
-  font-family: "PTSansBold";
   color: rgb(0, 0, 0);
+}
+
+.nav__menu-link:hover {
+  color: #81b3d2;
+}
+
+.nav__menu-link:focus {
+  color: #81b3d2;
 }
 
 .nav__menu-item:nth-last-of-type(2) {
@@ -57,7 +71,7 @@
 }
 
 .banner__intro {
-  background-image: url('./img/welcome.png');
+  background-image: url('../img/welcome.png');
   background-size: cover;
   background-position: center;
 }
