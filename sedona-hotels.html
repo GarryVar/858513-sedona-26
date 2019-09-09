@@ -21,7 +21,7 @@
         <li><a href="">информация</a></li>
         <li><a href="">фото и видио</a></li>
         <li><a href="">карта штата</a></li>
-        <li><a href="catalog.html">гостиницы</a></li>
+        <li><a href="sedona-hotels.html">гостиницы</a></li>
       </ul>
     </nav>
     <!-- /nav -->
@@ -30,7 +30,74 @@
 
   <!-- main -->
   <main>
-    <h1>Сортировка гостиниц, мотелей апартаментов</h1>
+    <h1>Выбор гостиниц, мотелей и апартаментов</h1>
+
+    <section>
+      <h2>Фильтр инфраструктуры и жилья</h2>
+      <form action="">
+
+        <div>
+          <h3>Инфраструктура:</h3>
+
+          <p>
+            <label for="pool">Бассейн</label>
+            <input type="checkbox" id="pool" name="pool" checked>
+          </p>
+
+          <p>
+            <label for="parking">Парковка</label>
+            <input type="checkbox" id="parking" name="parking">
+          </p>
+
+          <p>
+            <label for="wifi">wi-fi</label>
+            <input type="checkbox" id="wifi" name="wifi">
+          </p>
+
+          <h3>Тип жилья:</h3>
+          <p>
+            <label for="hotel">Гостиница</label>
+            <input type="checkbox" if="hotel" name="hotel" checked>
+          </p>
+
+          <p>
+            <label for="motel">Мотель</label>
+            <input type="checkbox" id="motel" name="motel" checked>
+          </p>
+
+          <p>
+            <label for="aparts">Апартаменты</label>
+            <input type="checkbox" id="aparts" name="aparts" checked>
+          </p>
+
+        </div>
+
+        <div>
+          <h3>Стоимость в сутки</h3>
+          <input type="range">
+        </div>
+
+        <button>Показать</button>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Сортировка</h2>
+
+      <p>
+        <b>найдено: 3</b>
+      </p>
+      <p>Сортировка:</p>
+
+      <ul>
+        <li><a href="">По цене</a></li>
+        <li><a href="">По типу</a></li>
+        <li><a href="">по рейтингу</a></li>
+      </ul>
+      <button type="button">Вверх</button>
+      <button type="button">Вниз</button>
+    </section>
 
     <section>
 
@@ -47,7 +114,7 @@
           <span>от 4000 р.</span>
 
           <a href="">подробнее</a>
-          <button>забронировать</button>
+          <button type="button">забронировать</button>
 
           <span>рейтинг:8,5</span>
           <div></div>
@@ -67,7 +134,7 @@
           <span>от 3000 р.</span>
 
           <a href="">подробнее</a>
-          <button>забронировать</button>
+          <button type="button">забронировать</button>
 
           <span>рейтинг:8,9</span>
           <div></div>
@@ -89,7 +156,7 @@
           <span>от 2000 р.</span>
 
           <a href="">подробнее</a>
-          <button>забронировать</button>
+          <button type="button">забронировать</button>
 
           <span>рейтинг:9,2</span>
           <div></div>
