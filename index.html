@@ -9,20 +9,20 @@
 <body>
 
   <!-- header -->
-  <header>
+  <header class="header">
     <!-- logo -->
-    <a href="./">
-      <img src="img/logo.png" alt="Логотип 'Sedona'" width="140" height="72">
+    <a class="header__logo" href="./">
+      <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
     </a>
     <!-- /logo -->
 
     <!-- nav -->
-    <nav>
-      <ul>
-        <li><a href="">информация</a></li>
-        <li><a href="">фото и видео</a></li>
-        <li><a href="">карта штата</a></li>
-        <li><a href="sedona-hotels.html">гостиницы</a></li>
+    <nav class="nav header__nav">
+      <ul class="nav__menu">
+        <li class="nav__item"><a class="nav__link" href="">информация</a></li>
+        <li class="nav__item"><a class="nav__link" href="">фото и видео</a></li>
+        <li class="nav__item"><a class="nav__link" href="">карта штата</a></li>
+        <li class="nav__item"><a class="nav__link" href="sedona-hotels.html">гостиницы</a></li>
       </ul>
     </nav>
     <!-- /nav -->
@@ -30,16 +30,20 @@
   <!-- /header -->
 
   <!-- main -->
-  <main>
+  <main class="main">
     <h1>Седона - онлайн бронирование хостелов в Седоне</h1>
 
-    <section>
-      <img src="img/sedona.jpg" alt="Скалы Седоны" width="1200" height="773">
-      <img src="img/welcome.png" alt="Добро пожаловать в Седону" width="459" height="353">
-      <img src="img/polygon.png" alt="">
+    <section class="intro main__intro">
+
+      <div class="intro__pic">
+        <img src="img/sedona.jpg" alt="Скалы Седоны" width="1200" height="773">
+        <img src="img/welcome.png" alt="Добро пожаловать в Седону" width="459" height="353">
+        <img src="img/polygon.png" alt="">
+      </div>
+
     </section>
 
-    <section class="features">
+    <section class="features main__features">
       <h2 class="features__header">Приемущества</h2>
 
       <p>
@@ -79,7 +83,7 @@
         </li>
 
 
-        <li class=" features__item features__item--type-2">
+        <li class=" features__item features__item--type-1">
           <div class="features__content">
             <h3 class="features__title">Там есть мост дьявола</h3>
             <span class="features__number">№ 2</span>
@@ -90,12 +94,37 @@
           </div>
         </li>
 
+        <li class="features__item features__item--type-3">
+
+          <h3>Небольшая площадь</h3>
+          <span class="number">№ 3</span>
+          <p>Все достопримечательности находятся очень близко</p>
+
+        </li>
+
+        <li class="features__item features__item--type-3">
+
+          <h3>Красивая дорога</h3>
+          <span class="number">№ 4</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+
+        </li>
+
+        <li class="features__item features__item--type-3">
+
+          <h3>Мало туристов</h3>
+          <span class="number">№ 5</span>
+          <p>Большинство едет в гранд каньон и толпится там</p>
+
+        </li>
+
       </ol>
 
     </section>
 
 
-    <section class="search">
+    <section class="search main__search">
+
       <h2 class="search__header">Поиск гостиницы в Седоне</h2>
 
       <p><strong>Заинтересовались?</strong></p>
@@ -119,13 +148,13 @@
 
   </main>
 
-  <footer>
+  <footer class="footer">
     <span>#visitsedona</span>
 
-    <ul>
-      <li><a href="">twitter</a></li>
-      <li><a href="">vk</a></li>
-      <li><a href="">youtube</a></li>
+    <ul class="social-list">
+      <li class="social-list__item"><a class="social-list__link" href="">twitter</a></li>
+      <li class="social-list__item"><a class="social-list__link" href="">vk</a></li>
+      <li class="social-list__item"><a class="social-list__link" href="">youtube</a></li>
     </ul>
 
     <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
