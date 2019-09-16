@@ -97,7 +97,8 @@
           <legend class="filter__caption">Стоимость в сутки</legend>
 
           <button class="button filter__submit">Показать</button>
-          <input type="range">
+          <label class="visually-hidden" for="cost">Выбор стоимости</label>
+          <input type="range" min="0" max="3000" id="cost" name="cost">
         </fieldset>
 
         <fieldset class="sort filter__sort">
