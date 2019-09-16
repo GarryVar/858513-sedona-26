@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 
-  <!-- <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -22,8 +22,8 @@
 
     <!-- nav -->
     <nav class="nav header__nav">
-      <ul class="nav__menu">
 
+      <ul class="nav__menu">
         <li class="nav__item">
           <a class="nav__link" href="">Информация</a>
         </li>
@@ -39,8 +39,8 @@
         <li class="nav__item">
           <a class="nav__link" href="sedona-hotels.html">Гостиницы</a>
         </li>
-
       </ul>
+
     </nav>
     <!-- /nav -->
   </header>
@@ -48,13 +48,12 @@
 
   <!-- main -->
   <main class="main">
-    <!-- <h1>Выбор гостиниц, мотелей и апартаментов</h1> -->
 
     <div class="filter">
 
       <form class="filter__form" action=".php">
 
-        <fieldset class="filter__selection">
+        <fieldset class="filter__selection filter__selection--type-1">
           <legend class="filter__caption">Инфраструктура:</legend>
 
           <p>
@@ -73,7 +72,7 @@
           </p>
         </fieldset>
 
-        <fieldset class="filter__selection">
+        <fieldset class="filter__selection filter__selection--type-1">
           <legend class="filter__caption">Тип жилья:</legend>
 
           <p>
@@ -93,12 +92,13 @@
 
         </fieldset>
 
-        <fieldset class="filter__price">
+        <fieldset class="filter__price filter__selection--type-2">
 
-          <legend>Стоимость в сутки</legend>
+          <legend class="filter__caption">Стоимость в сутки</legend>
 
           <button class="button filter__submit">Показать</button>
-          <input type="range">
+          <label class="visually-hidden" for="cost">Выбор стоимости</label>
+          <input type="range" min="0" max="3000" id="cost" name="cost">
         </fieldset>
 
         <fieldset class="sort filter__sort">
@@ -112,15 +112,15 @@
             <li class="sort__item"><a class="sort__link" href="">По рейтингу</a></li>
           </ul>
 
-          <button class="button sort__button" type="button">Вверх</button>
-          <button class="button sort__button" type="button">Вниз</button>
+          <button class="button sort__button" type="button">По возрастанию</button>
+          <button class="button sort__button" type="button">По убыванию</button>
 
         </fieldset>
       </form>
     </div>
 
     <section class="hotels">
-      <h2>Список гостиниц в Седоне</h2>
+      <h2 clas="hotels__title">Список гостиниц в Седоне</h2>
 
       <ol class="hotels__list">
 
@@ -141,13 +141,12 @@
           <div class="rating">
             <span class="rating__count">рейтинг:8,9</span>
 
-            <input class="rating__star" type="radio" value="1" name="star-rating">
-            <input class="rating__star" type="radio" value="2" name="star-rating">
-            <input class="rating__star" type="radio" value="3" name="star-rating">
-            <input class="rating__star" type="radio" value="4" name="star-rating">
-            <input class="rating__star" type="radio" value="5" name="star-rating">
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
           </div>
-
 
         </li>
 
@@ -168,13 +167,12 @@
           <div class="rating">
             <span class="rating__count">рейтинг:8,5</span>
 
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
           </div>
-
 
         </li>
 
@@ -196,14 +194,13 @@
 
             <span class="rating__count">рейтинг:9,5</span>
 
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
-            <input class="rating__star" type="radio">
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
+            <span class="rating__star"></span>
 
           </div>
-
 
         </li>
 
@@ -214,7 +211,7 @@
   </main>
 
   <footer class="footer">
-    <span>#visitsedona</span>
+    <span>#visitsedona</span>  
 
     <ul class="social-list footer__social-list">
       <li class="social-list__item"><a class="social-list__link" href="">twitter</a></li>
@@ -222,10 +219,10 @@
       <li class="social-list__item"><a class="social-list__link" href="">youtube</a></li>
     </ul>
 
-    <a class="social__link social__link--htmlacademy " href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+    <a class="social-list__link social-list__link--htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
 
   </footer>
-  <!-- /main -->
+  <!-- /main -->  
 
 
 </body>
