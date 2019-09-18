@@ -4,46 +4,48 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
+<!-- page -->
+<div class="page">
+    <!-- header -->
+    <header class="header">
 
-  <!-- header -->
-  <header class="header">
-    <!-- logo -->
-    <a class="header__logo" href="index.html">
-      <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
-    </a>
-    <!-- /logo -->
+      <!-- logo -->
+      <a class="header__logo" href="index.html">
+        <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
+      </a>
+      <!-- /logo -->
 
-    <!-- nav -->
-    <nav class="nav header__nav">
+      <!-- nav -->
+      <nav class="nav header__nav">
+        <!-- nav__list -->
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="">Информация</a>
+          </li>
 
-      <ul class="nav__menu">
-        <li class="nav__item">
-          <a class="nav__link" href="">Информация</a>
-        </li>
+          <li class="nav__item">
+            <a class="nav__link" href="">Фото и видео</a>
+          </li>
 
-        <li class="nav__item">
-          <a class="nav__link" href="">Фото и видео</a>
-        </li>
+          <li class="nav__item">
+            <a class="nav__link" href="">Карта штата</a>
+          </li>
 
-        <li class="nav__item">
-          <a class="nav__link" href="">Карта штата</a>
-        </li>
+          <li class="nav__item">
+            <a class="nav__link" href="sedona-hotels.html">Гостиницы</a>
+          </li>
+        </ul>
+        <!-- /nav__list -->
+      </nav>
+      <!-- /nav -->
 
-        <li class="nav__item">
-          <a class="nav__link" href="sedona-hotels.html">Гостиницы</a>
-        </li>
-      </ul>
-
-    </nav>
-    <!-- /nav -->
-  </header>
+    </header>
+    <!-- /header -->
   <!-- /header -->
 
   <!-- main -->
@@ -197,7 +199,7 @@
             <span class="rating__star"></span>
             <span class="rating__star"></span>
             <span class="rating__star"></span>
-            <span class="rating__star"></span>
+            <span class="rating__star"></span> 
             <span class="rating__star"></span>
 
           </div>
@@ -209,20 +211,42 @@
 
 
   </main>
+  <!-- /main -->
 
+   <!-- footer -->
   <footer class="footer">
-    <span>#visitsedona</span>  
+    <div class="footer__row">
+      
+      <div class="footer__column">
+        <span class="footer__text">#visitsedona</span>
+      </div>
 
-    <ul class="social-list footer__social-list">
-      <li class="social-list__item"><a class="social-list__link" href="">twitter</a></li>
-      <li class="social-list__item"><a class="social-list__link" href="">vk</a></li>
-      <li class="social-list__item"><a class="social-list__link" href="">youtube</a></li>
-    </ul>
+    <div class="footer__column">
+      <ul class="social-list footer__social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Twitter"></a>
+        </li>
 
-    <a class="social-list__link social-list__link--htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Vkontakte"></a>
+        </li>
 
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Youtube"></a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="footer__column">
+      <a class="social-list__link social-list__link--htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+    </div>
   </footer>
-  <!-- /main -->  
+  <!-- /footer --> 
+
+
+</div>
+<!-- /page -->
 
 
 </body>
