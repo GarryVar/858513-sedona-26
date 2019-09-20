@@ -13,7 +13,7 @@
   <!-- page -->
   <div class="page">
     <!-- header -->
-    <header class="header page__header">
+    <header class="header">
       <!-- logo -->
       <a class="header__logo" href="index.html">
         <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
@@ -22,31 +22,34 @@
 
       <!-- nav -->
       <nav class="nav header__nav">
-        <!-- nav__list -->
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="">Информация</a>
-          </li>
+        <div class="container">
+          <!-- nav__list -->
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--left-padding" href="">Информация</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Фото и видео</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Фото и видео</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Карта штата</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Карта штата</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="sedona-hotels.html">Гостиницы</a>
-          </li>
-        </ul>
-        <!-- /nav__list -->
+            <li class="nav__item">
+              <a class="nav__link nav__link--right-padding" href="sedona-hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+          <!-- /nav__list -->
+        </div>
+
       </nav>
       <!-- /nav -->
 
+      <!-- </div> -->
     </header>
     <!-- /header -->
-
     <!-- main -->
     <main class="main">
       <h1 class="visually-hidden">Седона - онлайн бронирование хостелов в Седоне</h1>
@@ -95,26 +98,28 @@
           </li>
 
           <li class="features__item features__item--type-2">
-            <!-- features-sublist -->
-            <ul class="features-sublist">
-              <!-- features-sublist__items -->
-              <li class="features-sublist__item features-sublist__item--icon-house">
-                <h3 class="features-sublist__title">Жильё</h3>
-                <p class="features-sublist__text">Рекомендуем пожить в настоящем мотеле, <br> всё как в кино!</p>
-              </li>
+            <div class="container">
+              <!-- features-sublist -->
+              <ul class="features-sublist">
+                <!-- features-sublist__items -->
+                <li class="features-sublist__item features-sublist__item--icon-house">
+                  <h3 class="features-sublist__title">Жильё</h3>
+                  <p class="features-sublist__text">Рекомендуем пожить в настоящем мотеле, <br> всё как в кино!</p>
+                </li>
 
-              <li class="features-sublist__item features-sublist__item--icon-food">
-                <h3 class="features-sublist__title">Еда</h3>
-                <p class="features-sublist__text">Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
-              </li>
+                <li class="features-sublist__item features-sublist__item--icon-food">
+                  <h3 class="features-sublist__title">Еда</h3>
+                  <p class="features-sublist__text">Всегда заказывайте фирменный бургер, <br> вы не разочаруетесь!</p>
+                </li>
 
-              <li class="features-sublist__item features-sublist__item--icon-gift">
-                <h3 class="features-sublist__title">Сувениры</h3>
-                <p class="features-sublist__text">Не только китайского, <br> но и местного производства!</p>
-              </li>
-              <!-- /features-sublist__items -->
-            </ul>
-            <!-- /features-sublist -->
+                <li class="features-sublist__item features-sublist__item--icon-gift">
+                  <h3 class="features-sublist__title">Сувениры</h3>
+                  <p class="features-sublist__text">Не только китайского, <br> но и местного производства!</p>
+                </li>
+                <!-- /features-sublist__items -->
+              </ul>
+              <!-- /features-sublist -->
+            </div>
           </li>
 
           <li class="features__item features__item--type-1">
@@ -140,34 +145,37 @@
             <!-- row -->
           </li>
 
-          <li class="features__item features__item--type-2">
-            <!-- features-sublist  -->
-            <ul class="features-sublist features-sublist--gray">
-              <li class="features-sublist__item">
-                <div class="features-sublist__content">
-                  <h3 class="features-sublist__title">Небольшая <br> площадь</h3>
-                  <span class="features-sublist__number">№ 3</span>
-                  <p class="features-sublist__text">Все достопримечательности <br> находятся очень близко</p>
-                </div>
-              </li>
+          <li class="features__item features__item--type-2 features__item--gray">
+            <div class="container">
 
-              <li class="features-sublist__item">
-                <div class="features-sublist__content">
-                  <h3 class="features-sublist__title">Красивая <br> дорога</h3>
-                  <span class="features-sublist__number">№ 4</span>
-                  <p class="features-sublist__text">Ехать в Седону из Лас-Вегаса совсем <br> не скучно!</p>
-                </div>
-              </li>
+              <!-- features-sublist  -->
+              <ul class="features-sublist">
+                <li class="features-sublist__item">
+                  <div class="features-sublist__content">
+                    <h3 class="features-sublist__title">Небольшая <br> площадь</h3>
+                    <span class="features-sublist__number">№ 3</span>
+                    <p class="features-sublist__text">Все достопримечательности <br> находятся очень близко</p>
+                  </div>
+                </li>
 
-              <li class="features-sublist__item">
-                <div class="features-sublist__content">
-                  <h3 class="features-sublist__title">Мало <br> туристов</h3>
-                  <span class="features-sublist__number">№ 5</span>
-                  <p class="features-sublist__text">Большинство едет в гранд каньон <br> и толпится там</p>
-                </div>
-              </li>
-            </ul>
-            <!-- /features-sublist -->
+                <li class="features-sublist__item">
+                  <div class="features-sublist__content">
+                    <h3 class="features-sublist__title">Красивая <br> дорога</h3>
+                    <span class="features-sublist__number">№ 4</span>
+                    <p class="features-sublist__text">Ехать в Седону из Лас-Вегаса совсем <br> не скучно!</p>
+                  </div>
+                </li>
+
+                <li class="features-sublist__item">
+                  <div class="features-sublist__content">
+                    <h3 class="features-sublist__title">Мало <br> туристов</h3>
+                    <span class="features-sublist__number">№ 5</span>
+                    <p class="features-sublist__text">Большинство едет в гранд каньон <br> и толпится там</p>
+                  </div>
+                </li>
+              </ul>
+              <!-- /features-sublist -->
+            </div>
           </li>
           <!-- /features__items -->
         </ol>
@@ -178,13 +186,22 @@
 
       <!-- search -->
       <section class="search main__search">
-        <div class="search__content">
-          <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-          <p class="search__text search__text--big"><strong>Заинтересовались?</strong></p>
-          <p class="search__text search__text--narrow">
-            Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
-          </p>
-          <a class="button button--search" href="hotel-search.html">Поиск гостиницы в Седоне</a>
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <div class="container">
+          <!-- row -->
+          <div class="search__row">
+            <div class="search__column">
+              <p class="search__text search__text--big"><strong>Заинтересовались?</strong></p>
+              <p class="search__text search__text--narrow">
+                Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
+              </p>
+            </div>
+            <div class="search__column">
+              <a class="button button--search" href="hotel-search.html">Поиск гостиницы в Седоне</a>
+            </div>
+
+          </div>
+          <!-- /row -->
         </div>
 
 
@@ -222,33 +239,35 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__row">
+      <div class="container">
+        <div class="footer__row">
 
-        <div class="footer__column">
-          <span class="footer__text">#visitsedona</span>
+          <div class="footer__column">
+            <span class="footer__text">#visitsedona</span>
+          </div>
+
+          <div class="footer__column">
+            <ul class="social-list footer__social-list">
+              <li class="social-list__item social-list__item--twitter">
+                <a class="social-list__link" href="" aria-label="Twitter"></a>
+              </li>
+
+              <li class="social-list__item social-list__item--fb">
+                <a class="social-list__link" href="" aria-label="Facebook"></a>
+              </li>
+
+              <li class="social-list__item social-list__item--youtube">
+                <a class="social-list__link" href="" aria-label="Youtube"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <a class="social-list__link social-list__link--htmlacademy"
+              href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+          </div>
         </div>
-
-        <div class="footer__column">
-          <ul class="social-list footer__social-list">
-            <li class="social-list__item social-list__item--twitter">
-              <a class="social-list__link" href="" aria-label="Twitter"></a>
-            </li>
-
-            <li class="social-list__item social-list__item--fb">
-              <a class="social-list__link" href="" aria-label="facebook"></a>
-            </li>
-
-            <li class="social-list__item social-list__item--youtube">
-              <a class="social-list__link" href="" aria-label="Youtube"></a>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="footer__column">
-          <a class="social-list__link social-list__link--htmlacademy"
-            href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
-        </div>
+      </div>
     </footer>
     <!-- /footer -->
 

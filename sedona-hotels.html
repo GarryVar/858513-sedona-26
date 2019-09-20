@@ -13,7 +13,6 @@
   <div class="page">
     <!-- header -->
     <header class="header">
-
       <!-- logo -->
       <a class="header__logo" href="index.html">
         <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
@@ -22,39 +21,44 @@
 
       <!-- nav -->
       <nav class="nav header__nav">
-        <!-- nav__list -->
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="">Информация</a>
-          </li>
+        <div class="container">
+          <!-- nav__list -->
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--left-padding" href="">Информация</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Фото и видео</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Фото и видео</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link" href="">Карта штата</a>
-          </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Карта штата</a>
+            </li>
 
-          <li class="nav__item">
-            <a class="nav__link nav__link--current" href="sedona-hotels.html">Гостиницы</a>
-          </li>
-        </ul>
-        <!-- /nav__list -->
+            <li class="nav__item">
+              <a class="nav__link nav__link--right-padding nav__link--current" href="sedona-hotels.html">Гостиницы</a>
+            </li>
+          </ul>
+          <!-- /nav__list -->
+        </div>
+
       </nav>
       <!-- /nav -->
 
+      <!-- </div> -->
     </header>
     <!-- /header -->
-
     <!-- main -->
     <main class="main">
       <!-- filter -->
       <div class="filter main__filter">
         <!-- filter__form -->
         <form class="filter__form" action=".php">
-          <!-- row -->
+
           <div class="filter__content">
+
+            <!-- row -->
             <div class="filter__row">
               <!-- columns -->
               <div class="filter__column">
@@ -107,131 +111,188 @@
                 </fieldset>
               </div>
 
-              <div class="filter__column">
-                <fieldset class="filter__price filter__selection--type-2">
+              <div class="filter__column price__wrap">
+                <fieldset class="price filter__price filter__selection--type-2">
+                  <legend class="price__caption">Стоимость в сутки(p):</legend>
 
-                  <legend class="filter__caption">Стоимость в сутки</legend>
-
-                  <button class="button filter__submit">Показать</button>
                   <label class="visually-hidden" for="cost">Выбор стоимости</label>
                   <input type="range" min="0" max="3000" id="cost" name="cost">
                 </fieldset>
+                <button class="button filter__submit">Показать</button>
               </div>
               <!-- /columns -->
             </div>
+            <!-- /row -->
           </div>
-          <!-- /row -->
+          <!-- /filter__content -->
 
           <!-- row -->
-          <div class="filter__row">
-            <!-- columns -->
-            <div class="filter__column">
-              <fieldset class="sort filter__sort">
-                <legend class="sort__caption">Сортировка</legend>
+          <div class="sort filter__sort">
+            <div class="container">
+              <div class="sort__row">
+                <p class="sort__text"><b>найдено: 3</b></p>
+                <fieldset class="sort__type">
 
-                <p><b>найдено: 3</b></p>
+                  <div class="sort__wrap">
+                    <legend class="sort__caption">Сортировка:</legend>
 
-                <ul class="sort__list">
-                  <li class="sort__item"><a class="sort__link" href="">По цене</a></li>
-                  <li class="sort__item"><a class="sort__link" href="">По типу</a></li>
-                  <li class="sort__item"><a class="sort__link" href="">По рейтингу</a></li>
-                </ul>
+                    <ul class="sort__list">
+                      <li class="sort__item"><a class="sort__link sort__link--active" href="">По цене</a></li>
+                      <li class="sort__item"><a class="sort__link" href="">По типу</a></li>
+                      <li class="sort__item"><a class="sort__link" href="">По рейтингу</a></li>
+                    </ul>
+                    <div class="sort__button-group">
+                      <button class="button sort__button sort__button--up" type="button"
+                        arial-label="По возрастанию"></button>
+                      <button class="button sort__button sort__button--down" type="button"
+                        arial-label="По убыванию"></button>
+                    </div>
 
-                <button class="button sort__button" type="button">По возрастанию</button>
-                <button class="button sort__button" type="button">По убыванию</button>
 
-              </fieldset>
+                  </div>
+
+                </fieldset>
+              </div>
             </div>
-            <!-- /columns -->
           </div>
           <!-- /row -->
         </form>
-        <!-- /filter__form -->
       </div>
       <!-- /filter -->
       <!-- hotels -->
       <section class="hotels">
-        <h2 clas="hotels__title">Список гостиниц в Седоне</h2>
-
+        <h2 class="visually-hidden">Список гостиниц в Седоне</h2>
         <ol class="hotels__list">
 
           <li class="hotels__item">
+            <div class="container">
+              <!-- hotel__row -->
+              <div class="hotels__row">
+                <div class="hotels__pic">
+                  <img class="hotels__img" src="./img/hotel-photo.jpg" alt="Гостиница 'Amara resort & spa'" width="135"
+                    height="90">
+                </div>
 
-            <h3 class="hotels__title">Amara resort & spa</h3>
+                <div class="hotels__options">
+                  <h3 class="hotels__title">Amara resort & spa</h3>
 
-            <div class="hotels__pic">
-              <img src="./img/hotel-photo.jpg" alt="Гостиница 'Amara resort & spa'" width="135" height="90">
+                  <div class="hotels__info-group">
+                    <span class="hotels__type">Мотель</span>
+                    <span class="hotels__price">от 4000 р.</span>
+                  </div>
+
+                  <div class="hotels__link-group">
+                    <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
+                    <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
+                  </div>
+
+                </div>
+
+                <!-- rating -->
+                <div class="rating hotels__rating">
+                  <div class="rating__row">
+                    <span class="rating__count">рейтинг: 8,9</span>
+
+                    <div class="rating__star-group">
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- /rating -->
+              </div>
+              <!-- /hotel__row -->
             </div>
-
-            <span class="hotels__type">Мотель</span>
-            <span class="hotels__price">от 4000 р.</span>
-
-            <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
-            <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
-
-            <div class="rating">
-              <span class="rating__count">рейтинг:8,9</span>
-
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-            </div>
-
           </li>
 
           <li class="hotels__item">
+            <div class="container">
+              <div class="hotels__row">
+                <div class="hotels__pic">
+                  <img class="hotels__img" src="./img/hotel-photo02.jpg" alt="Гостиница 'Desert Quail Inn'" width="135"
+                    height="90">
+                </div>
 
-            <h3 class="hotels__title">Desert Quail Inn</h3>
+                <div class="hotels__options">
+                  <h3 class="hotels__title">Desert Quail Inn</h3>
 
-            <div class="hotels__pic">
-              <img src="./img/hotel-photo02.jpg" alt="Гостиница 'Desert Quail Inn'" width="135" height="90">
+                  <div class="hotels__info-group">
+                    <span class="hotels__type">гостиница</span>
+                    <span class="hotels__price">от 3000 р.</span>
+                  </div>
+
+                  <div class="hotels__link-group">
+                    <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
+                    <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
+                  </div>
+                </div>
+
+                <!-- rating -->
+                <div class="rating hotels__rating">
+                  <div class="rating__row">
+                    <span class="rating__count">рейтинг: 8,5</span>
+
+                    <div class="rating__star-group">
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- /rating -->
+              </div>
+
             </div>
-
-            <span class="hotels__type">гостиница</span>
-            <span class="hotels__price">от 3000 р.</span>
-
-            <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
-            <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
-
-            <div class="rating">
-              <span class="rating__count">рейтинг:8,5</span>
-
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-            </div>
-
           </li>
 
           <li class="hotels__item">
+            <div class="container">
+              <div class="hotels__row">
+                <div class="hotels__pic">
+                  <img class="hotels__img" src="./img/hotel-photo03.jpg" alt="Гостиница 'Villas at Poco Diablo'"
+                    width="135" height="90">
+                </div>
 
-            <h3 class="hotels__title">Villas at Poco Diablo</h3>
+                <div class="hotels__options">
+                  <h3 class="hotels__title">Villas at Poco Diablo</h3>
 
-            <div class="hotels__pic">
-              <img src="./img/hotel-photo03.jpg" alt="Гостиница 'Villas at Poco Diablo'" width="135" height="90">
-            </div>
+                  <div class="hotels__info-group">
+                    <span class="hotels__type">апартаменты</span>
+                    <span class="hotels__price">от 2000 р.</span>
+                  </div>
 
-            <span class="hotels__type">апартаменты</span>
-            <span class="hotels__price">от 2000 р.</span>
+                  <div class="hotels__link-group">
+                    <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
+                    <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
+                  </div>
 
-            <a class="hotels__link hotels__link--more" href="#">Подробнее</a>
-            <a class="hotels__link hotels__link--book" href="#">Забронировать</a>
+                </div>
 
-            <div class="rating">
+                <!-- rating -->
+                <div class="rating hotels__rating">
+                  <div class="rating__row">
+                    <span class="rating__count">рейтинг: 9,5</span>
 
-              <span class="rating__count">рейтинг:9,5</span>
+                    <div class="rating__star-group">
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                      <span class="rating__star"></span>
+                    </div>
+                    <!-- /rating -->
+                  </div>
 
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-              <span class="rating__star"></span>
-
-            </div>
+                </div>
 
           </li>
 
@@ -243,36 +304,37 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__row">
+      <div class="container">
+        <div class="footer__row">
 
-        <div class="footer__column">
-          <span class="footer__text">#visitsedona</span>
+          <div class="footer__column">
+            <span class="footer__text">#visitsedona</span>
+          </div>
+
+          <div class="footer__column">
+            <ul class="social-list footer__social-list">
+              <li class="social-list__item social-list__item--twitter">
+                <a class="social-list__link" href="" aria-label="Twitter"></a>
+              </li>
+
+              <li class="social-list__item social-list__item--fb">
+                <a class="social-list__link" href="" aria-label="Facebook"></a>
+              </li>
+
+              <li class="social-list__item social-list__item--youtube">
+                <a class="social-list__link" href="" aria-label="Youtube"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <a class="social-list__link social-list__link--htmlacademy"
+              href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+          </div>
         </div>
-
-        <div class="footer__column">
-          <ul class="social-list footer__social-list">
-            <li class="social-list__item social-list__item--twitter">
-              <a class="social-list__link" href="" aria-label="Twitter"></a>
-            </li>
-
-            <li class="social-list__item social-list__item--fb">
-              <a class="social-list__link" href="" aria-label="Facebook"></a>
-            </li>
-
-            <li class="social-list__item social-list__item--youtube">
-              <a class="social-list__link" href="" aria-label="Youtube"></a>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="footer__column">
-          <a class="social-list__link social-list__link--htmlacademy"
-            href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
-        </div>
+      </div>
     </footer>
     <!-- /footer -->
-
 
   </div>
   <!-- /page -->
