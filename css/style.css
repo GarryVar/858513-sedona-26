@@ -59,9 +59,13 @@ html {
   background-color: rgb(242, 242, 242);
 }
 
+.page__header {
+  position: relative;
+}
+
 .header {
   background-color: #fff;
-  position: relative;
+
 }
 
 .header__logo {
@@ -474,8 +478,6 @@ html {
   justify-content: space-between;
 }
 
-
-
 /*/filter*/
 
 /*footer*/
@@ -515,21 +517,23 @@ html {
   background-color: #669ec0;
 }
 
-.social-list__item:nth-child(1) {
+.social-list__item--twitter {
   background-image: url('../img/icon-twitter.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.social-list__item:nth-child(2) {
-  margin: 0 6px;
+.social-list__item--fb {
+  margin: 0;
+  margin-left: 3px;
   background-image: url('../img/icon-facebook.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.social-list__item:nth-child(3) {
-  margin: 0 6px;
+.social-list__item--youtube {
+  margin: 0;
+  margin-left: 3px;
   background-image: url('../img/icon-youtube.svg');
   background-repeat: no-repeat;
   background-position: center;
