@@ -20,7 +20,7 @@
       <!-- /logo -->
 
       <!-- nav -->
-      <nav class="nav header__nav">
+      <nav class="nav header__nav" aria-label="Главная">
         <div class="container">
           <!-- nav__list -->
           <ul class="nav__list">
@@ -132,10 +132,9 @@
               <div class="sort__row">
                 <p class="sort__text"><b>найдено: 3</b></p>
                 <fieldset class="sort__type">
-
+                  <legend class="visually-hidden">Сортировка:</legend>
                   <div class="sort__wrap">
-                    <legend class="sort__caption">Сортировка:</legend>
-
+                    <span class="sort__caption">Сортировка:</span>
                     <ul class="sort__list">
                       <li class="sort__item"><a class="sort__link sort__link--active" href="">По цене</a></li>
                       <li class="sort__item"><a class="sort__link" href="">По типу</a></li>
@@ -147,8 +146,6 @@
                       <button class="button sort__button sort__button--down" type="button"
                         arial-label="По убыванию"></button>
                     </div>
-
-
                   </div>
 
                 </fieldset>
@@ -166,7 +163,7 @@
 
           <li class="hotels__item">
             <div class="container">
-              <!-- hotel__row -->
+              <!-- hotels__row -->
               <div class="hotels__row">
                 <div class="hotels__pic">
                   <img class="hotels__img" src="./img/hotel-photo.jpg" alt="Гостиница 'Amara resort & spa'" width="135"
@@ -191,28 +188,27 @@
                 <!-- rating -->
                 <div class="rating hotels__rating">
                   <div class="rating__row">
-                    <span class="rating__count">рейтинг: 8,9</span>
-
                     <div class="rating__star-group">
-                      <span class="rating__star"></span>
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
                     </div>
 
+                    <span class="rating__count">рейтинг: 8,9</span>
                   </div>
 
                 </div>
                 <!-- /rating -->
               </div>
-              <!-- /hotel__row -->
+              <!-- /hotels__row -->
             </div>
           </li>
 
           <li class="hotels__item">
             <div class="container">
               <div class="hotels__row">
+
                 <div class="hotels__pic">
                   <img class="hotels__img" src="./img/hotel-photo02.jpg" alt="Гостиница 'Desert Quail Inn'" width="135"
                     height="90">
@@ -235,22 +231,17 @@
                 <!-- rating -->
                 <div class="rating hotels__rating">
                   <div class="rating__row">
-                    <span class="rating__count">рейтинг: 8,5</span>
-
                     <div class="rating__star-group">
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
-                      <span class="rating__star"></span>
-                      <span class="rating__star"></span>
                     </div>
-
+                    <span class="rating__count">рейтинг: 8,5</span>
                   </div>
 
                 </div>
                 <!-- /rating -->
               </div>
-
             </div>
           </li>
 
@@ -280,20 +271,19 @@
                 <!-- rating -->
                 <div class="rating hotels__rating">
                   <div class="rating__row">
-                    <span class="rating__count">рейтинг: 9,5</span>
 
                     <div class="rating__star-group">
                       <span class="rating__star"></span>
                       <span class="rating__star"></span>
-                      <span class="rating__star"></span>
-                      <span class="rating__star"></span>
-                      <span class="rating__star"></span>
                     </div>
+
+                    <span class="rating__count">рейтинг: 9,5</span>
                     <!-- /rating -->
                   </div>
 
                 </div>
-
+              </div>
+            </div>
           </li>
 
         </ol>
