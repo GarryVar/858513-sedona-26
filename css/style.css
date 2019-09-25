@@ -365,7 +365,7 @@ body {
  .button--search {
   display: inline-block;
   background-color: #766357;
-  font-family: 'PT Sans Bold';
+  font-family: 'PT Sans Bold'; 
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
