@@ -24,8 +24,6 @@ body {
   font-size: 14px;
 }
 
-
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,6 +33,12 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .page {
@@ -127,16 +131,14 @@ body {
   font-size: inherit;
   line-height: 20px;
 }
-
-
-.features__text,
-.features__text--big {
+.features__text.features__text--big {
   font-family: 'PT Sans Bold';
   line-height: 31px;
   font-size: 21px;
   z-index: 10;
 }
 
+.features__text,
 .features__text--narrow {
   font-family: 'PT Sans Normal';
   font-size: inherit;
@@ -212,67 +214,156 @@ body {
   margin-bottom: 0;
 }
 
-.features__item--type-2.features__item {
-  display: inline-flex;
-  flex-wrap: nowrap;
+/*features-sublist*/
+
+.features-sublist {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
 }
 
-.features__item--type-2 .features__content {
-  position: relative;
-  padding-top: 100px;
-  padding-bottom: 88px;
-  background-color: #fff;
-}
-
-.features__item--type-2 .features__content--icon-house::before {
+.features-sublist__item--icon-house::before {
   content: '';
-  position: relative;
-  top: -32px;
-  left: 0;
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 75px;
   height: 72px;
   background-image: url('../img/icon-house.svg');
   background-repeat: no-repeat;
 }
 
-.features__item--type-2 .features__content--icon-food::before {
+.features-sublist__item--icon-food::before {
   content: '';
-  position: relative;
-  top: -32px;
-  left: 0;
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 75px;
   height: 72px;
   background-image: url('../img/icon-burger.svg');
   background-repeat: no-repeat;
 }
 
-.features__item--type-2 .features__content--icon-gift::before {
+.features-sublist__item--icon-gift::before {
   content: '';
-  position: relative;
-  top: -32px;
-  left: 15px;
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 75px;
   height: 72px;
   background-image: url('../img/icon-gift.svg');
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-size: contain;
 }
 
-.features__item--type-2 .features__title {
+.features-sublist__item {
+  position: relative;
+  padding-top: 164px;
+  padding-bottom: 88px;
+}
+
+.features-sublist__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-sublist__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 21px;
   color: #000;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 }
 
-.features__item--type-2 .features__text {
+.features-sublist__text {
   font-family: 'PT Sans Normal';
   font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
   line-height: 20px;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 32px;
 }
 
+
+.features-sublist--gray {
+  background-color: #eeeeee;
+}
+
+.features-sublist--gray .features-sublist__item {
+  padding-top: 50px;
+}
+
+.features-sublist__number {
+  position: relative;
+  padding: 0 20px;
+  color: #333333;
+}
+
+.features-sublist__number::before{
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 9px;
+  height: 2px;
+  background-color: #333333;
+}
+.features-sublist__number::after{
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 9px;
+  height: 2px;
+  background-color: #333333;
+}
+ /*/features-sublist*/
+
 /*/features*/
+
+
+/*search*/
+.search__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .search__text {
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+ }
+
+ .search__text--big {
+  font-family: 'PT Sans Bold';
+  font-size: 30px;
+  margin-top: 57px;
+ }
+
+ .search__text--narrow {
+  line-height: 20px;
+ }
+
+ .button--search {
+  display: inline-block;
+  background-color: #766357;
+  font-family: 'PT Sans Bold';
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 21px;
+  padding: 35px 140px;
+  margin-top: 53px;
+ }
+/*/search*/
 
 
 
