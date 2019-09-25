@@ -13,7 +13,6 @@
   <div class="page">
     <!-- header -->
     <header class="header">
-
       <!-- logo -->
       <a class="header__logo" href="index.html">
         <img src="img/logo.png" alt="Логотип Седона" width="140" height="72">
@@ -22,7 +21,8 @@
 
       <!-- nav -->
       <nav class="nav header__nav">
-        <ul class="nav__menu">
+        <!-- nav__list -->
+        <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="">Информация</a>
           </li>
@@ -39,6 +39,7 @@
             <a class="nav__link" href="sedona-hotels.html">Гостиницы</a>
           </li>
         </ul>
+        <!-- /nav__list -->
       </nav>
       <!-- /nav -->
 
@@ -193,22 +194,37 @@
       <!-- /search -->
     </main>
     <!-- /main -->
+    
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__row">
+      
+      <div class="footer__column">
+        <span class="footer__text">#visitsedona</span>
+      </div>
 
-    <!-- footer -->
-    <footer class="footer">
+    <div class="footer__column">
+      <ul class="social-list footer__social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Twitter"></a>
+        </li>
 
-      <span>#visitsedona</span>
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Vkontakte"></a>
+        </li>
 
-      <ul class="social-list">
-        <li class="social-list__item"><a class="social-list__link" href="">twitter</a></li>
-        <li class="social-list__item"><a class="social-list__link" href="">vk</a></li>
-        <li class="social-list__item"><a class="social-list__link" href="">youtube</a></li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="" aria-label="Youtube"></a>
+        </li>
+
       </ul>
+    </div>
 
-      <a class="social__link social__link--htmlacademy " href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
-
-    </footer>
-    <!-- /footer -->
+    <div class="footer__column">
+      <a class="social-list__link social-list__link--htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+    </div>
+  </footer>
+  <!-- /footer -->
 
   </div>
   <!-- /page -->
