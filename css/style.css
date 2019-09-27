@@ -22,10 +22,10 @@ html {
   box-sizing: inherit;
 }
 
-/* *:focus {
-  outline: 0;
-  box-shadow: inset 0 0 0 3px #eb1;
-} */
+*:focus {
+  outline: 2px dashed #1e4861;
+  outline-offset: 3px;
+}
 
 body {
   margin: 0;
@@ -130,6 +130,10 @@ body {
 .nav__link--right-padding {
   padding-right: 0;
   margin-right: 0;
+}
+
+.nav__link:focus {
+  color: #81b3d2;
 }
 
 .nav__link:hover {
@@ -492,28 +496,28 @@ body {
 
 .hotel-search--hide {
   position: absolute;
-  top:-400px;
+  top: -400px;
   left: 50%;
   transform: translateX(-50%);
   padding: 55px;
   background-color: #fff;
   font-family: 'PT Sans Bold';
   text-transform: uppercase;
-  width:570px;
+  width: 570px;
   box-shadow: 0 0 20px 0px #838282;
   transition: ease 0.3s;
 }
 
 .hotel-search {
   position: absolute;
-  top:0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   padding: 55px;
   background-color: #fff;
   font-family: 'PT Sans Bold';
   text-transform: uppercase;
-  width:570px;
+  width: 570px;
   box-shadow: 0 0 20px 0px #838282;
   transition: ease 0.3s;
 }
@@ -545,23 +549,30 @@ body {
   width: 100%;
 }
 
+.hotel-search__input:focus {
+  outline: 2px dashed #5496bd;
+  ;
+  outline-offset: 5px;
+  background-color: #ebebeb;
+}
+
 .hotel-search__input:hover {
   background-color: #ebebeb;
 }
 
 .hotel-search__input:active {
   background-color: #fff;
-  box-shadow: 0 0 0  2px #e5e5e5;
+  box-shadow: 0 0 0 2px #e5e5e5;
 }
 
 .hotel-search__adult {
-  display:  flex;
-  align-items:  center; 
+  display: flex;
+  align-items: center;
   margin-bottom: 54px;
 }
 
-.hotel-search__adult .hotel-search__label:last-child  {
-    margin-left: 53px;
+.hotel-search__adult .hotel-search__label:last-child {
+  margin-left: 53px;
 }
 
 .hotel-search__adult .hotel-search__input {
@@ -569,8 +580,8 @@ body {
   margin-left: 42px;
   border: none;
   background-color: #f2f2f2;
-  text-align:   center; 
-  width:  114px;
+  text-align: center;
+  width: 114px;
 }
 
 .hotel-search__submit {
@@ -588,7 +599,7 @@ body {
 }
 
 .hotel-search__submit:active {
-  color: rgba(255,255,255,0.5); 
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /*.hotel-search__adult .hotel-search__input:last-child {
@@ -611,6 +622,12 @@ body {
   font-size: 16px;
   color: #fff;
   text-transform: uppercase;
+}
+
+
+.filter__label:focus {
+  outline: 2px dashed #1e4861;
+  outline-offset: 3px;
 }
 
 .filter__selection,
@@ -772,32 +789,7 @@ body {
   margin-bottom: 32px;
 }
 
-/* .filter__price {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-} */
-
-/* --- filter --- */
-
 /* --- price --- */
-/*
-.price__wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.price__caption {
-  font-family: 'PT Sans Bold';
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-} */
-
-/* --- price --- */
-
 /* --- sort --- */
 
 .sort.filter__sort {
@@ -887,6 +879,7 @@ body {
   width: 11px;
   height: 10px;
   background-repeat: no-repeat;
+  font-size: 0;
 }
 
 .sort__button--up:hover {
@@ -1170,3 +1163,101 @@ body {
 }
 
 /* --- footer --- */
+
+
+@media (max-width: 768px) {
+  img {
+    width: 100%;
+  }
+
+  .page {
+    width: 90%;
+  }
+
+  .container {
+    margin: auto;
+    width: 100%;
+  }
+
+  .intro__pic {
+    position: relative;
+    width: 100%;
+    height: 573px;
+    background-image: url(../img/welcome.png), url(../img/polygon.png), url(../img/sedona.jpg);
+    background-repeat: no-repeat;
+    background-size: 459px 353px, contain, cover;
+    background-position: center 25px, center bottom 54px, 0 -55px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .features__list::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 831px;
+    background-color: #eeeeee;
+    z-index: 0;
+  }
+
+
+  .features__item--type-1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #81b3d2;
+  }
+
+  .features__item--type-1 .features__content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #81b3d2;
+  }
+
+  .features__item--type-2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .features__item--type-3 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .footer {
+    margin: 0;
+  }
+
+  .page__footer {
+    position: static;
+    margin: 0;
+  }
+
+  .footer__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    min-height: 120px;
+  }
+
+}
