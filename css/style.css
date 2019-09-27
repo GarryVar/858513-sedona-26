@@ -473,6 +473,7 @@ body {
   font-size: 21px;
   padding: 35px 140px;
   margin-top: 53px;
+  border: none;
 }
 
 .button--search:hover {
@@ -486,6 +487,21 @@ body {
 
 .search__pic {
   position: relative;
+  overflow: hidden;
+}
+
+.hotel-search--hide {
+  position: absolute;
+  top:-400px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 55px;
+  background-color: #fff;
+  font-family: 'PT Sans Bold';
+  text-transform: uppercase;
+  width:570px;
+  box-shadow: 0 0 20px 0px #838282;
+  transition: ease 0.3s;
 }
 
 .hotel-search {
@@ -499,6 +515,7 @@ body {
   text-transform: uppercase;
   width:570px;
   box-shadow: 0 0 20px 0px #838282;
+  transition: ease 0.3s;
 }
 
 .hotel-search__fieldset {
