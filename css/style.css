@@ -20,11 +20,6 @@ html {
   box-sizing: inherit;
 }
 
-/* *:focus {
-  outline: 2px dashed #1e4861;
-  outline-offset: 3px;
-} */
-
 body {
   margin: 0;
   font-family: 'PT Sans Normal', 'Arial', 'Helvetica', serif;
@@ -48,13 +43,17 @@ body {
   border: none;
 }
 
-.container {
+.wrapper {
   margin-left: auto;
   margin-right: auto;
   width: 1056px;
 }
 
-.page {
+.page-index .container {
+  position: relative;
+}
+
+.container {
   position: relative;
   width: 1200px;
   margin: auto;
@@ -62,17 +61,13 @@ body {
   background-color: rgb(242, 242, 242);
 }
 
-.page__header {
-  position: relative;
-}
-
 /* --- header ---*/
 
-.header {
+.main-header {
   background-color: #fff;
 }
 
-.header__logo {
+.main-header__logo {
   position: absolute;
   top: 0;
   left: 50%;
@@ -80,7 +75,7 @@ body {
   z-index: 1;
 }
 
-.header__nav {
+.main-header__nav {
   min-height: 56px;
 }
 
@@ -702,6 +697,11 @@ body {
   color: #000;
 }
 
+.filter__submit:focus {
+  background-color: #fff;
+  color: #000;
+}
+
 .filter__row {
   max-width: 1056px;
   margin-left: auto;
@@ -1006,6 +1006,12 @@ body {
 
 .hotels__link-group {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.hotels__info-group {
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .hotels__link {
@@ -1088,17 +1094,23 @@ body {
 
 /* --- footer --- */
 
-.page__footer {
+/* .page__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
+
+.page-index .main-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.footer {
+.main-footer {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.footer__row {
+.main-footer__row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1106,14 +1118,14 @@ body {
   /* min-height: 120px; */
 }
 
-.footer__text {
+.main-footer__text {
   color: #000;
   font-size: 21px;
   font-family: 'PT Sans Bold';
   text-transform: uppercase;
 }
 
-.footer__social-list {
+.main-footer__social-list {
   display: flex;
   padding: 0;
   margin: 0;
@@ -1142,7 +1154,7 @@ body {
   margin-right: 0;
 }
 
-.social-list__link:hover {
+.social-list__link:hover, .social-list__link:focus {
   background-color: #669ec0;
 }
 
@@ -1161,7 +1173,7 @@ body {
   fill-opacity: 0.5;
 }
 
-.footer__link {
+.main-footer__link {
   display: inline-block;
   width: 116px;
   height: 41px;
@@ -1169,16 +1181,16 @@ body {
   font-size: 0;
 }
 
-.footer__copy {
+.main-footer__copy {
   text-transform: uppercase;
   margin-right: 8px;
 }
 
-.footer__link svg:hover {
+.main-footer__link svg:hover {
   fill: #81b3d2;
 }
 
-.footer__link svg:active {
+.main-footer__link svg:active {
   fill: #bdbbbc;
 }
 
