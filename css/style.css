@@ -1072,7 +1072,8 @@ body {
 .rating__star-group {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: auto;
+  /* margin-bottom: auto; */
+  margin-bottom: 47px;
 }
 
 .rating__star {
