@@ -1014,7 +1014,7 @@ body {
 }
 
 .hotels__title .hotels__title-link:hover,
-.hotels__title .hotels__title-link:FOCUS {
+.hotels__title .hotels__title-link:focus {
   color: #81b3d2;
 }
 
@@ -1203,7 +1203,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.social-list__link:active path {
+.social-list__link:active svg  {
   fill-opacity: 0.5;
 }
 
@@ -1220,15 +1220,15 @@ body {
   margin-right: 8px;
 }
 
-.main-footer__link svg:hover {
+.main-footer__link:hover svg {
   fill: #81b3d2;
 }
 
-.main-footer__link svg:focus {
+.main-footer__link:focus svg {
   fill: #81b3d2;
 }
 
-.main-footer__link svg:active {
+.main-footer__link:active  svg {
   fill: #bdbbbc;
 }
 
