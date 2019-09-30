@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'PT Sans Normal';
   src: url('../fonts/ptsans.woff') format('woff'), url('../fonts/ptsans.woff2') format('woff2');
@@ -24,6 +25,11 @@ body {
   margin: 0;
   font-family: 'PT Sans Normal', 'Arial', 'Helvetica', serif;
   font-size: 14px;
+}
+
+*:focus {
+  outline: 2px dashed #5496bd;
+  outline-offset: 5px;
 }
 
 .visually-hidden {
@@ -544,7 +550,6 @@ body {
 
 .hotel-search__input:focus {
   outline: 2px dashed #5496bd;
-  ;
   outline-offset: 5px;
   background-color: #ebebeb;
 }
@@ -595,9 +600,6 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/*.hotel-search__adult .hotel-search__input:last-child {
-  margin-right: 0;
-}*/
 
 /* --- search --- */
 
@@ -676,6 +678,11 @@ body {
   width: 24px;
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23fff' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+}
+
+.filter__checkbox:focus+.filter__check {
+  outline: 2px dashed #034c77;
+  outline-offset: 5px;
 }
 
 .filter__submit {
@@ -972,6 +979,11 @@ body {
   margin: 0;
 }
 
+.hotels__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hotels__title .hotels__title-link {
   font-family: 'PT Sans Bold';
   font-size: 21px;
@@ -981,7 +993,8 @@ body {
   margin: 0;
 }
 
-.hotels__title .hotels__title-link:hover {
+.hotels__title .hotels__title-link:hover,
+.hotels__title .hotels__title-link:FOCUS {
   color: #81b3d2;
 }
 
@@ -995,26 +1008,27 @@ body {
   justify-content: space-between;
 }
 
+.hotels__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .hotels__type, .hotels__price {
+  display: block;
   color: #333;
   text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
-.hotels__type {
-  margin-right: 40px;
-}
-
-.hotels__link-group {
+.hotels__typies {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.hotels__info-group {
-  display: inline-flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotels__link {
+  display: block;
   color: #fff;
   font-family: 'PT Sans Bold';
   text-transform: uppercase;
