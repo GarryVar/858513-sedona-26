@@ -30,6 +30,7 @@ body {
 *:focus {
   outline: 2px dashed #5496bd;
   outline-offset: 5px;
+  transition:  0.2s all;
 }
 
 .visually-hidden {
@@ -120,6 +121,7 @@ body {
   font-size: 14px;
   color: rgb(0, 0, 0);
   padding: 22px 0;
+  transition: ease 0.3s all;
 }
 
 .nav__link--left-padding {
@@ -477,6 +479,7 @@ body {
   padding: 35px 140px;
   margin-top: 53px;
   border: none;
+  transition: ease 0.3s all;
 }
 
 .button--search:hover {
@@ -540,12 +543,25 @@ body {
 }
 
 .hotel-search__input {
+  position: relative;
   margin: 0;
   margin-left: 21px;
   border: none;
   background-color: #f2f2f2;
   padding: 10px;
   width: 100%;
+}
+
+.hotel-search__input:before {
+  content: '';
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 9px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../img/icon-calendar.svg');
+  z-index: 0;
 }
 
 .hotel-search__input:focus {
@@ -997,11 +1013,6 @@ body {
 
 .hotels__title {
   margin: 0;
-}
-
-.hotels__info {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .hotels__title .hotels__title-link {
