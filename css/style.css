@@ -30,7 +30,6 @@ body {
 *:focus {
   outline: 2px dashed #5496bd;
   outline-offset: 5px;
-  transition:  0.2s all;
 }
 
 .visually-hidden {
