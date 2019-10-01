@@ -487,15 +487,17 @@ body {
 .button--search {
   display: inline-block;
   background-color: #766357;
-  font-family: 'PT Sans Bold';
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: 'PT Sans Bold';
   font-size: 21px;
+  vertical-align: middle;
   padding: 35px 140px;
-  margin-top: 46px;
+  margin-top: 47px;
   border: none;
-  transition: ease 0.3s;
+  transition: ease .3s;
+  padding-top: 33px;
 }
 
 .button--search:hover,
@@ -544,6 +546,7 @@ body {
 }
 
 .hotel-search__fieldset {
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -1240,6 +1243,7 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
+  margin-left:64px;
   list-style: none;
   cursor: pointer;
 }
