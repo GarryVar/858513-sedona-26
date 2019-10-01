@@ -1,13 +1,14 @@
-let showHotelSearchForm = () => {
 
-  let searchHotel = document.querySelector('.hotel-search--hide');
-  let showBtn = document.querySelector('.button--search');
+var searchForm = function(){
 
-  showBtn.addEventListener('click', () => {
+  var searchHotel = document.querySelector('.hotel-search--hide');
+  var searchBtn = document.querySelector('.button--search');
+
+  searchBtn.addEventListener('click', function(){
     searchHotel.classList.toggle('hotel-search--hide');
-    searchHotel.classList.toggle('hotel-search');
+    searchHotel.classList.toggle('hotel-search'); 
   });
 
 };
 
-showHotelSearchForm();
+searchForm();
