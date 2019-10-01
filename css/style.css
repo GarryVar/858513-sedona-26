@@ -172,10 +172,6 @@ body {
 
 /* --- intro --- */
 
-.main__intro {
-/*  background: linear-gradient(-45deg,#a2c4dc,#6b494a);*/
-}
-
 .intro__pic {
   position: relative;
   width: 100%;
@@ -498,7 +494,8 @@ body {
   transition: ease 0.3s;
 }
 
-.button--search:hover {
+.button--search:hover,
+.button--search:focus {
   background-color: #604e43;
   transition: ease 0.3s;
 }
