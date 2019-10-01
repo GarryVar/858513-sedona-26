@@ -32,7 +32,7 @@ body {
 }
 
 *:focus {
-  outline: 1px dashed #5496bd;
+  outline: 2px dashed #5496bd;
   outline-offset: 5px;
 }
 
@@ -69,6 +69,7 @@ body {
   margin: auto;
   box-shadow: 0 0 10px 4px #dbdbdb;
   background-color: rgb(242, 242, 242);
+  overflow: hidden;
 }
 
 /* --- header ---*/
@@ -152,6 +153,7 @@ body {
 
 .nav__link:active {
   color: #b2b2b2;
+  transition: ease 0.3s;
 }
 
 .nav__link--current {
@@ -170,14 +172,19 @@ body {
 
 /* --- intro --- */
 
+.main__intro {
+/*  background: linear-gradient(-45deg,#a2c4dc,#6b494a);*/
+}
+
 .intro__pic {
   position: relative;
   width: 100%;
   min-height: 506px;
+  background: linear-gradient(160deg,#a2c4dc,#6b494a);
   background-image: url(../img/welcome.png), url(../img/polygon.png), url(../img/sedona.jpg);
   background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 459px 353px, contain, cover;
+/*  background-size: 459px 353px, contain, cover;*/
   background-position: center 77px, center bottom -1px, 0 -55px;
 }
 
@@ -488,16 +495,18 @@ body {
   padding: 35px 140px;
   margin-top: 53px;
   border: none;
-  transition: ease 0.3s all;
+  transition: ease 0.3s;
 }
 
 .button--search:hover {
   background-color: #604e43;
+  transition: ease 0.3s;
 }
 
 .button--search:active {
   color: #857871;
   background-color: #503e33;
+  transition: ease 0.3s;
 }
 
 .search__pic {
@@ -574,7 +583,7 @@ body {
 }
 
 .hotel-search__input:focus {
-  outline: 1px dashed #5496bd;
+  outline: 2px dashed #5496bd;
   outline-offset: 5px;
   background-color: #ebebeb;
   transition: ease 0.3s;
@@ -646,6 +655,7 @@ body {
 /* --- filter --- */
 
 .filter__content {
+  background: linear-gradient(90deg,#4f7ca5,#4f4847);
   background-image: url('../img/sedona-blur.jpg');
   background-size: cover;
   padding-top: 32px;
@@ -695,7 +705,7 @@ body {
   position: relative;
   width: 24px;
   height: 24px;
-  left: 8px;
+  left: 0px;
   z-index: 9000;
   opacity: 0;
 }
@@ -721,11 +731,13 @@ body {
   width: 24px;
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23fff' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
+  transition: ease 0.3s;
 }
 
 .filter__checkbox:focus+.filter__check {
   outline: 2px dashed #034c77;
   outline-offset: 5px;
+  transition: ease 0.3s;
 }
 
 .filter__row {
@@ -945,16 +957,19 @@ body {
 
 .sort__link:hover {
   color: #81b3d2;
+  transition: ease 0.3s;
 }
 
 .sort__link:focus, 
 .sort__link:focus-within {
   color: #81b3d2;
   border-bottom: none;
+/*  transition: ease 0.3s;*/
 }
 
 .sort__link:active {
   color: #000;
+  transition: ease 0.3s;
 }
 
 .sort__link--active {
@@ -1114,7 +1129,7 @@ body {
   text-decoration: none;
   padding: 0 16px;
   padding-top: 5px;
-  padding-bottom: 8px
+  padding-bottom: 5px
 }
 
 .hotels__link--more {
@@ -1126,7 +1141,7 @@ body {
 .hotels__link--more:hover, 
 .hotels__link--more:focus {
   background-color: #669ec0;
-  transition: ease 0.3s;
+/*  transition: ease 0.3s;*/
 }
 
 .hotels__link--more:active {
@@ -1136,18 +1151,18 @@ body {
 
 .hotels__link--book {
   background-color: #766357;
-   transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .hotels__link--book:hover, 
 .hotels__link--book:focus {
   background-color: #604e43;
-   transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .hotels__link--book:active {
   color: #857871;
-   transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 /* --- hotels --- */
