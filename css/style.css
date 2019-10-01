@@ -9,11 +9,11 @@
   font-family: 'PT Sans Bold';
   src: url('../fonts/ptsansbold.woff') format('woff'), url('../fonts/ptsansbold.woff2') format('woff2');
   font-weight: 800;
-  font-style: bold;  
+  font-style: bold;
 }
 
 html {
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* img {
@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  background-color: #f2f2f2;
   margin: 0;
   font-family: 'PT Sans Normal', 'Arial', 'Helvetica', serif;
   font-size: 14px;
@@ -149,7 +150,7 @@ body {
 .nav__link:hover {
   color: #81b3d2;
   transition: ease 0.3s;
-  }
+}
 
 .nav__link:active {
   color: #b2b2b2;
@@ -175,13 +176,13 @@ body {
 .intro__pic {
   position: relative;
   width: 100%;
-  min-height: 508px;
-  background: linear-gradient(160deg,#a2c4dc,#6b494a);
+  min-height: 509px;
+  background: linear-gradient(160deg, #a2c4dc, #6b494a);
   background-image: url(../img/welcome.png), url(../img/polygon.png), url(../img/sedona.jpg);
   background-color: #fff;
   background-repeat: no-repeat;
-/*  background-size: 459px 353px, contain, cover;*/
-  background-position: center 77px, center bottom -1px, 0 -55px;
+  /*  background-size: 459px 353px, contain, cover;*/
+  background-position: center 76px, center bottom -1px, 0 -55px;
 }
 
 /*/ --- intro --- */
@@ -210,7 +211,7 @@ body {
 .features__text, .features__text--narrow {
   font-family: 'PT Sans Normal';
   font-size: inherit;
-  margin-top:28px;
+  margin-top: 28px;
 }
 
 .features__list {
@@ -219,7 +220,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 54px 0 0;
-  padding:0;
+  padding: 0;
   padding: 0;
   list-style: none;
 }
@@ -252,6 +253,7 @@ body {
 }
 
 .features__item--type-1 .features__title {
+  margin-bottom: 32px;
   font-family: 'PT Sans Bold';
   text-align: center;
   font-size: 21px;
@@ -265,7 +267,7 @@ body {
   position: relative;
   color: #fff;
   padding: 0 14px;
-  top: -3px;
+  bottom: 8px;
 }
 
 .features__item--type-1 .features__number::before {
@@ -426,8 +428,10 @@ body {
 
 .features__item--type-3 .features__number {
   position: relative;
-  padding: 0 20px;
-  color: #333333;
+  padding: 0 12px;
+  color: #333;
+  display: inline-block;
+  bottom: 9px;
 }
 
 .features__item--type-3 .features__number::before {
@@ -500,8 +504,7 @@ body {
   padding-top: 33px;
 }
 
-.button--search:hover,
-.button--search:focus {
+.button--search:hover, .button--search:focus {
   background-color: #604e43;
   transition: ease 0.3s;
 }
@@ -552,12 +555,32 @@ body {
 }
 
 .hotel-search__date {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 29px;
+  width: 457px;
+}
+
+.hotel-search__date::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 9px;
+  width: 22px;
+  height: 22px;
+  background-image: url('../img/icon-calendar.svg');
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hotel-search__date::before:hover {
+  background-image: url('../img/icon-calendar.svg');
 }
 
 .hotel-search__label {
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
@@ -575,17 +598,6 @@ body {
   cursor: pointer;
 }
 
-.hotel-search__input::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 9px;
-  width: 22px;
-  height: 22px;
-  background-image: url('../img/icon-calendar.svg');
-}
-
 .hotel-search__input:focus {
   outline: 2px dashed #5496bd;
   outline-offset: 5px;
@@ -597,7 +609,6 @@ body {
   background-color: #ebebeb;
   transition: ease 0.3s;
   cursor: pointer;
-
 }
 
 .hotel-search__input:active {
@@ -612,11 +623,10 @@ body {
   text-transform: uppercase;
 }
 
-
 .hotel-search__adult {
   display: flex;
   align-items: center;
-  margin-bottom: 54px;   
+  margin-bottom: 55px;
 }
 
 .hotel-search__adult .hotel-search__label:last-child {
@@ -624,33 +634,31 @@ body {
 }
 
 .hotel-search__adult .hotel-search__input {
-  margin: 0;
-  margin-left: 42px;
+  margin: 0px 0 0 34px;
   border: none;
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
   text-align: center;
   width: 114px;
+  padding: 13px 0;
 }
 
 .hotel-search__submit {
-  display: block;
-  width: 100%;
+  min-width: 459px;
   padding: 17px 0;
-  background-color: #81b3d2; 
+  background-color: #81b3d2;
   font-size: 21px;
   color: #fff;
-  text-transform: uppercase; 
-  transition: ease 0.3s;  
+  text-transform: uppercase;
+  transition: ease 0.3s;
 }
 
-.hotel-search__submit:hover,
-.hotel-search__submit:focus {
+.hotel-search__submit:hover, .hotel-search__submit:focus {
   background-color: #669ec0;
-    transition: ease 0.3s;   
+  transition: ease 0.3s;
 }
 
 .hotel-search__submit:active {
-  color: rgba(255, 255, 255, 0.5); 
+  color: rgba(255, 255, 255, 0.5);
   transition: ease 0.3s;
 }
 
@@ -659,18 +667,18 @@ body {
 /* --- filter --- */
 
 .filter__content {
-  background: linear-gradient(90deg,#4f7ca5,#4f4847);
+  background: linear-gradient(90deg, #4f7ca5, #4f4847);
   background-image: url('../img/sedona-blur.jpg');
   background-size: cover;
   padding-top: 32px;
-  padding-bottom: 18px;   
+  padding-bottom: 18px;
 }
 
 .filter__content .filter__label {
-  font-family: 'PT Sans Normal'; 
+  font-family: 'PT Sans Normal';
   font-size: 16px;
   color: #fff;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 .filter__label:focus {
@@ -678,9 +686,7 @@ body {
   outline-offset: 3px;
 }
 
-.filter__selection, 
-.filter__price, 
-.filter__sort {
+.filter__selection, .filter__price, .filter__sort {
   border: none;
   margin: 0;
   padding: 0;
@@ -964,11 +970,10 @@ body {
   transition: ease 0.3s;
 }
 
-.sort__link:focus, 
-.sort__link:focus-within {
+.sort__link:focus, .sort__link:focus-within {
   color: #81b3d2;
   border-bottom: none;
-/*  transition: ease 0.3s;*/
+  /*  transition: ease 0.3s;*/
 }
 
 .sort__link:active {
@@ -1001,14 +1006,12 @@ body {
   margin-left: 12px;
 }
 
-.sort__button--up path:hover, 
-.sort__button--down path:hover {
+.sort__button--up path:hover, .sort__button--down path:hover {
   fill: #231f20;
   transition: ease 0.3s;
 }
 
-.sort__button--up:focus path, 
-.sort__button--down:focus path {
+.sort__button--up:focus path, .sort__button--down:focus path {
   fill: #231f20;
   transition: ease 0.3s;
 }
@@ -1018,8 +1021,7 @@ body {
 }
 */
 
-.sort__button--up path:active, 
-.sort__button--down path:active {
+.sort__button--up path:active, .sort__button--down path:active {
   fill: #81b3d2;
   transition: ease 0.3s;
 }
@@ -1086,18 +1088,17 @@ body {
   text-decoration: none;
   color: #000;
   margin: 0;
-  transition: ease 0.3s;  
+  transition: ease 0.3s;
 }
 
-.hotels__title .hotels__title-link:hover, 
-.hotels__title .hotels__title-link:focus {
+.hotels__title .hotels__title-link:hover, .hotels__title .hotels__title-link:focus {
   color: #81b3d2;
-  transition: ease 0.3s;  
+  transition: ease 0.3s;
 }
 
 .hotels__title .hotels__title-link:active {
   color: #b2b2b2;
-  transition: ease 0.3s;  
+  transition: ease 0.3s;
 }
 
 .hotels__options {
@@ -1142,10 +1143,9 @@ body {
   transition: ease 0.3s;
 }
 
-.hotels__link--more:hover, 
-.hotels__link--more:focus {
+.hotels__link--more:hover, .hotels__link--more:focus {
   background-color: #669ec0;
-/*  transition: ease 0.3s;*/
+  /*  transition: ease 0.3s;*/
 }
 
 .hotels__link--more:active {
@@ -1158,8 +1158,7 @@ body {
   transition: ease 0.3s;
 }
 
-.hotels__link--book:hover, 
-.hotels__link--book:focus {
+.hotels__link--book:hover, .hotels__link--book:focus {
   background-color: #604e43;
   transition: ease 0.3s;
 }
@@ -1232,7 +1231,13 @@ body {
   /* min-height: 120px; */
 }
 
+.main-footer__column {
+  display: flex;
+  align-items: center;
+}
+
 .main-footer__text {
+  margin-left: 61px;
   color: #000;
   font-size: 21px;
   font-family: 'PT Sans Bold';
@@ -1243,7 +1248,7 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-left:64px;
+  margin-left: 28px;
   list-style: none;
   cursor: pointer;
 }
@@ -1270,8 +1275,7 @@ body {
   margin-right: 0;
 }
 
-.social-list__link:hover, 
-.social-list__link:focus {
+.social-list__link:hover, .social-list__link:focus {
   background-color: #669ec0;
   transition: ease 0.3s;
 }
@@ -1293,17 +1297,19 @@ body {
   transition: ease 0.3s;
 }
 
+.main-footer__copy {
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
 .main-footer__link {
   display: inline-block;
   width: 116px;
   height: 41px;
   vertical-align: middle;
   font-size: 0;
-}
-
-.main-footer__copy {
-  text-transform: uppercase;
-  margin-right: 8px;
+  margin: 0;
+  margin-right: 31px;
 }
 
 .main-footer__link:hover svg {
