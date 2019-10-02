@@ -212,27 +212,36 @@
               <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
 
               <div class="hotel-search__date">
+
                 <label class="hotel-search__label">Дата заезда:
                   <input class="hotel-search__input" type="text" name="trip" placeholder="4 июля 2017">
                 </label>
-              </div>
 
-              <div class=" hotel-search__date">
                 <label class="hotel-search__label">Дата выезда:
                   <input class="hotel-search__input" type="text" name="trip" placeholder="4 июля 2017">
                 </label>
+
               </div>
 
               <div class="hotel-search__adult">
-                <label class="hotel-search__label">
-                  Взрослые:
-                  <input class="hotel-search__input" type="number" min="0" max="20" value="2">
+
+                <label class="hotel-search__label">Взрослые:
+
+                  <input class="hotel-search__input" type="text" value="2">
+                  <button class="button hotel-search__adult-value hotel-search__adult-value--plus"></button>
+                  <button class="button hotel-search__adult-value hotel-search__adult-value--minus"></button>
+
                 </label>
 
 
-                <label class="hotel-search__label">Дети:
-                  <input class="hotel-search__input" type="number" min="0" max="20" value="2">
-                </label>
+              <label class="hotel-search__label">Дети:
+
+                <input class="hotel-search__input" type="text" value="2">
+                <button class="button hotel-search__adult-value hotel-search__adult-value--plus"></button>
+                <button class="button hotel-search__adult-value hotel-search__adult-value--minus"></button>
+
+              </label>
+
               </div>
 
               <button class="button

@@ -16,11 +16,6 @@ html {
   box-sizing: border-box;
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-} */
-
 *, ::before, ::after {
   box-sizing: inherit;
 }
@@ -33,8 +28,12 @@ body {
 }
 
 *:focus {
-  outline: 2px dashed #5496bd;
-  outline-offset: 5px;
+  outline: 1px dotted #222;
+  outline-offset: 3px;
+}
+
+.page-index .container {
+  position: relative;
 }
 
 .visually-hidden {
@@ -60,10 +59,6 @@ body {
   width: 1056px;
 }
 
-.page-index .container {
-  position: relative;
-}
-
 .container {
   position: relative;
   width: 1200px;
@@ -76,6 +71,8 @@ body {
 /* --- header ---*/
 
 .main-header {
+  padding: 0;
+  margin: 0;
   background-color: #fff;
 }
 
@@ -96,6 +93,7 @@ body {
 /* --- nav --- */
 
 .nav__list {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -103,6 +101,7 @@ body {
   justify-content: space-between;
   min-height: 56px;
   list-style: none;
+  z-index: 2;
 }
 
 .nav__item:focus {
@@ -149,12 +148,10 @@ body {
 
 .nav__link:hover {
   color: #81b3d2;
-  transition: ease 0.3s;
 }
 
 .nav__link:active {
   color: #b2b2b2;
-  transition: ease 0.3s;
 }
 
 .nav__link--current {
@@ -489,6 +486,7 @@ body {
 }
 
 .button--search {
+  position: relative;
   display: inline-block;
   background-color: #766357;
   color: #fff;
@@ -502,11 +500,16 @@ body {
   border: none;
   transition: ease .3s;
   padding-top: 33px;
+  z-index: 2;
 }
 
-.button--search:hover, .button--search:focus {
+.button--search:hover {
   background-color: #604e43;
   transition: ease 0.3s;
+}
+
+.button--search:focus {
+  background-color: #604e43;
 }
 
 .button--search:active {
@@ -557,32 +560,18 @@ body {
 .hotel-search__date {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 29px;
+  margin-bottom: 0;
   width: 457px;
 }
 
-.hotel-search__date::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 9px;
-  width: 22px;
-  height: 22px;
-  background-image: url('../img/icon-calendar.svg');
-  background-repeat: no-repeat;
-  z-index: 1;
-}
 
-.hotel-search__date::before:hover {
-  background-image: url('../img/icon-calendar.svg');
-}
-
-.hotel-search__label {
+.hotel-search__date .hotel-search__label {
   position: relative;
   display: flex;
   width: 100%;
+  margin-bottom: 29px;
   align-items: center;
   white-space: nowrap;
 }
@@ -590,7 +579,7 @@ body {
 .hotel-search__input {
   position: relative;
   margin: 0;
-  margin-left: 21px;
+  margin-left: 25px;
   border: none;
   background-color: #f2f2f2;
   padding: 10px;
@@ -599,8 +588,8 @@ body {
 }
 
 .hotel-search__input:focus {
-  outline: 2px dashed #5496bd;
-  outline-offset: 5px;
+  outline: 1px dotted #222;
+  outline-offset: 2px;
   background-color: #ebebeb;
   transition: ease 0.3s;
 }
@@ -624,23 +613,87 @@ body {
 }
 
 .hotel-search__adult {
+  display: flex;    
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 53px;
+}
+
+.hotel-search__adult .hotel-search__label {
+  position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 55px;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.hotel-search__adult .hotel-search__label:last-child {
-  margin-left: 53px;
-}
 
 .hotel-search__adult .hotel-search__input {
-  margin: 0px 0 0 34px;
+  margin: 0;
+  margin-left: 46px;
   border: none;
   background-color: #f2f2f2;
   text-align: center;
   width: 114px;
-  padding: 13px 0;
+  padding: 11px 0;
 }
+
+.hotel-search__adult-value {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%,-50%);
+  width: 12px;
+  height: 12px;
+  z-index: 1;
+}
+
+.hotel-search__adult-value--plus {
+  right: 8px;
+}
+
+.hotel-search__adult-value--minus {
+  left: 131px;
+}
+
+.hotel-search__adult-value--minus::before {
+  position: absolute;
+  content: '-';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #a9a9a9;
+  font-size: 30px;
+}
+
+.hotel-search__adult-value--plus::before {
+  position: absolute;
+  content: '+';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #a9a9a9;
+  font-size: 30px;
+}
+
+.hotel-search__adult-value--plus:hover::before,
+.hotel-search__adult-value--minus:hover::before {
+  color:#000000;
+}
+
+.hotel-search__adult-value--plus:focus::before,
+.hotel-search__adult-value--minus:focus::before {
+  color:#000000;
+}
+
+.hotel-search__adult-value--plus:active::before,
+.hotel-search__adult-value--minus:active::before {
+  color:#81b3d2;
+}
+
+
 
 .hotel-search__submit {
   min-width: 459px;
@@ -652,9 +705,13 @@ body {
   transition: ease 0.3s;
 }
 
-.hotel-search__submit:hover, .hotel-search__submit:focus {
+.hotel-search__submit:hover {
   background-color: #669ec0;
   transition: ease 0.3s;
+}
+
+.hotel-search__submit:focus {
+  background-color: #669ec0;
 }
 
 .hotel-search__submit:active {
@@ -681,12 +738,13 @@ body {
   text-transform: uppercase;
 }
 
-.filter__label:focus {
-  outline: 2px dashed #1e4861;
-  outline-offset: 3px;
+.filter__selection {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.filter__selection, .filter__price, .filter__sort {
+.filter__price, .filter__sort {
   border: none;
   margin: 0;
   padding: 0;
@@ -741,13 +799,11 @@ body {
   width: 24px;
   height: 24px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23fff' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
-  transition: ease 0.3s;
 }
 
 .filter__checkbox:focus+.filter__check {
-  outline: 2px dashed #034c77;
-  outline-offset: 5px;
-  transition: ease 0.3s;
+  outline: 1px dotted #222;
+  outline-offset: 2px;
 }
 
 .filter__row {
@@ -828,6 +884,10 @@ body {
   border: none;
 }
 
+.range-price__input:focus {
+  outline: 1px dotted #fff;
+}
+
 .filter-range__controls {
   position: relative;
   margin-bottom: 32px;
@@ -891,9 +951,9 @@ body {
 }
 
 .filter__submit:focus {
+  outline: 1px dotted #fff;
   background-color: #fff;
   color: #000;
-  transition: ease 0.3s;
 }
 
 /* --- price --- */
