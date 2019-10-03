@@ -200,14 +200,18 @@
                   search__text--narrow">
           Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <button class="button
-                  button--search" type="button">Поиск гостиницы в Седоне</button>
+        <a class="button
+                  button--search" href="#">Поиск гостиницы в Седоне</a>
 
-        <div class="search__pic">
-          <img src="img/map.png" alt="Карта Седоны">
+        <div class="map">
+
+          <iframe src="https://yandex.ru/map-widget/v1/-/CGsuEVJn" width="1200" height="596" frameborder="0"
+            allowfullscreen="true">
+          </iframe>
+          <!-- <img  src="img/map.png" alt="Карта Седоны"> -->
 
           <!-- Форма поиска гостиницы -->
-          <form class="hotel-search--hide" action=".php" method="post">
+          <form class="hotel-search--hide" action="" method="post">
             <fieldset class="hotel-search__fieldset">
               <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
 

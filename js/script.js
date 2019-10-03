@@ -1,25 +1,19 @@
+var searchHotel = document.querySelector('.hotel-search--hide');
+var searchBtn = document.querySelector('.button--search');
 
-var searchForm = function () {
+searchBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  searchHotel.classList.toggle('hotel-search--hide');
+  searchHotel.classList.toggle('hotel-search');
+});
 
-  var searchHotel = document.querySelector('.hotel-search--hide');
-  var searchBtn = document.querySelector('.button--search');
 
-  searchBtn.addEventListener('click', function () {
-    searchHotel.classList.toggle('hotel-search--hide');
-    searchHotel.classList.toggle('hotel-search');
-  });
+// searchBtn.addEventListener('keydown', function (event) {
+//   if (event.keydown === 27) {
+//     if ()
+//       searchHotel.classList.add('hotel-search--hide');
+//     searchHotel.classList.remove('hotel-search');
+//   }
+// });
 
-};
 
-searchForm();
-
-var personNumber = function () {
-
-  var form = document.querySelector('.hotel-search'),
-    personInput = document.querySelectorAll('.hotel-search__input'),
-    adultPlus = document.querySelector('.hotel-search__adult-value--plus'),
-    adultMinus = document.querySelector('.hotel-search__adult-value--minus');
-
-}
-
-personNumber();

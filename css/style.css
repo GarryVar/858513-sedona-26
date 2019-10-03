@@ -445,6 +445,13 @@ body {
 
 /* --- search --- */
 
+.map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 596px;
+}
+
 .search__row {
   display: flex;
   flex-direction: column;
@@ -500,11 +507,6 @@ body {
   color: #857871;
   background-color: #503e33;
   transition: ease 0.3s;
-}
-
-.search__pic {
-  position: relative;
-  overflow: hidden;
 }
 
 .hotel-search--hide {
