@@ -206,12 +206,12 @@ body {
   list-style: none;
 }
 
-.features__list::before {
+.features__list::after {
   content: '';
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 258px;
+  min-height: 260px;
   background-color: #eeeeee;
   z-index: 0;
 }
