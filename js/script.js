@@ -10,8 +10,13 @@ var inputOut = searchHotel.querySelector('[name=leave]');
 var inputAdult = searchHotel.querySelector('[name=adult]');
 var inputChild = searchHotel.querySelector('[name=child]');
 
+var btnPlus = searchHotel.querySelector('.hotel-search__adult-value--plus');
+var btnMinus = searchHotel.querySelector('.hotel-search__adult-value--minus');
+
 var isStorageSupport = true;
 var storage = '';
+
+var summ = '';
 
 try {
   storage = isStorageSupport.getItem('entry')
@@ -37,29 +42,23 @@ searchBtn.addEventListener('click', function (event) {
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  if (!inputEntry.value || !inputOut.value || !inputAdult.value || !inputChild.value) {
-    console.log("ЗАПОЛНИ ПОЛЯ!!!")
+  if (!inputEntry.value || !inputOut.value) {
+    console.log('Форма не отправилась');
   }
 
   else {
     if (isStorageSupport) {
       localStorage.setItem('entry', inputEntry.value);
       localStorage.setItem('leave', inputOut.value);
-      localStorage.setItem('adult', inputAdult.value);
-      localStorage.setItem('child', inputChild.value);
     }
 
+    console.log(inputOut.value);
+    console.log(inputEntry.value);
+    console.log('Форма отправилась');
   }
 
-  console.log(inputOut.value);
-  console.log(inputEntry.value);
-  console.log(inputAdult.value);
-  console.log(inputChild.value);
-
-  console.log('Форма отправилась');
 
 });
-
 
 window.addEventListener('keydown', function (event) {
   if (event.keyDown === 27) {
@@ -69,3 +68,22 @@ window.addEventListener('keydown', function (event) {
     }
   }
 });
+
+btnPlus.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  summ.textContent = inputAdult.value;
+  summ++;
+  inputAdult.value = summ++;
+});
+
+btnMinus.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  summ.textContent = inputAdult.value;
+  summ--;
+  inputAdult.value = summ--;
+});
+
+
+
