@@ -509,10 +509,10 @@ body {
   transition: ease 0.3s;
 }
 
-/*
-.hotel-search--hide {
+.hotel-search {
+  display: none;
   position: absolute;
-  top: -400px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   padding: 55px;
@@ -521,13 +521,6 @@ body {
   text-transform: uppercase;
   width: 570px;
   box-shadow: 0 0 20px 0px #838282;
-  transition: ease 0.3s;
-} */
-
-.hotel-search {
-  display: none;
-  position: absolute;
-  top: -500px;
 }
 
 .hotel-search--show {
