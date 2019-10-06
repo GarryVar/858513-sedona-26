@@ -10,13 +10,16 @@ var inputOut = searchHotel.querySelector('[name=leave]');
 var inputAdult = searchHotel.querySelector('[name=adult]');
 var inputChild = searchHotel.querySelector('[name=child]');
 
-var btnPlus = searchHotel.querySelector('.hotel-search__adult-value--plus');
-var btnMinus = searchHotel.querySelector('.hotel-search__adult-value--minus');
+var btnPlusAdult = searchHotel.querySelector('.hotel-search__adult-value--plus');
+var btnMinusAdult = searchHotel.querySelector('.hotel-search__adult-value--minus');
+var btnPlusChild = searchHotel.querySelector('.hotel-search__child-value--plus');
+var btnMinusChild = searchHotel.querySelector('.hotel-search__child-value--minus');
 
 var isStorageSupport = true;
 var storage = '';
 
-var summ = '';
+var summAdult = '';
+var summChild = '';
 
 try {
   storage = isStorageSupport.getItem('adult', 'child');
@@ -29,14 +32,12 @@ catch (err) {
 searchBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
-  searchHotel.classList.toggle('hotel-search--show');
-  searchHotel.classList.toggle('hotel-search');
+  searchHotel.classList.add('hotel-search--show');
   if (storage) {
     inputEntry.value = storage;
   }
   inputEntry.focus();
 });
-
 
 
 form.addEventListener("submit", function (event) {
@@ -52,6 +53,8 @@ form.addEventListener("submit", function (event) {
       localStorage.setItem('child', inputChild.value);
     }
 
+    console.log(inputEntry.value);
+    console.log(inputOut.value);
     console.log(inputAdult.value);
     console.log(inputChild.value);
     console.log('Форма отправилась');
@@ -61,6 +64,7 @@ form.addEventListener("submit", function (event) {
 });
 
 window.addEventListener('keydown', function (event) {
+  
   if (event.keyСode === 27) {
     if (searchHotel.classList.contains('hotel-search--show')) {
       event.preventDefault();
@@ -69,21 +73,54 @@ window.addEventListener('keydown', function (event) {
   }
 });
 
-btnPlus.addEventListener("click", function (event) {
+btnPlusAdult.addEventListener("click", function (event) {
   event.preventDefault();
 
-  summ.textContent = inputAdult.value;
-  summ++;
-  inputAdult.value = summ;
+  if(inputAdult.value >= 0) {
+
+      summAdult.textContent = inputAdult.value;
+      summAdult++;
+      inputAdult.value = summAdult;
+  }
+
 });
 
-btnMinus.addEventListener("click", function (event) {
+btnMinusAdult.addEventListener("click", function (event) {
   event.preventDefault();
 
-  summ.textContent = inputAdult.value;
-  summ--;
-  inputAdult.value = summ;
+  if(inputAdult.value != 0) {
+
+      summAdult.textContent = inputAdult.value;
+      summAdult--;
+      inputAdult.value = summAdult;
+  }
+
 });
+
+btnPlusChild.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  if(inputChild.value >=0) {
+
+      summChild.textContent = inputChild.value;
+      summChild++;
+      inputChild.value = summChild;
+  }
+
+});
+
+btnMinusChild.addEventListener('click', function(event) {
+  event.preventDefault();
+
+if(inputChild.value !=0) {
+
+      summChild.textContent = inputChild.value;
+      summChild--;
+      inputChild.value = summChild;
+      }
+
+});
+
 
 
 
