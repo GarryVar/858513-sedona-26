@@ -19,7 +19,7 @@ var storage = '';
 var summ = '';
 
 try {
-  storage = isStorageSupport.getItem('entry')
+  storage = isStorageSupport.getItem('adult', 'child');
 }
 
 catch (err) {
@@ -43,17 +43,17 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   if (!inputEntry.value || !inputOut.value) {
-    console.log('Форма не отправилась');
+    console.log('Форма не отправилась! Заполните кол-во Взрослых и Детей');
   }
 
   else {
     if (isStorageSupport) {
-      localStorage.setItem('entry', inputEntry.value);
-      localStorage.setItem('leave', inputOut.value);
+      localStorage.setItem('adult', inputAdult.value);
+      localStorage.setItem('child', inputChild.value);
     }
 
-    console.log(inputOut.value);
-    console.log(inputEntry.value);
+    console.log(inputAdult.value);
+    console.log(inputChild.value);
     console.log('Форма отправилась');
   }
 
@@ -61,7 +61,7 @@ form.addEventListener("submit", function (event) {
 });
 
 window.addEventListener('keydown', function (event) {
-  if (event.keyDown === 27) {
+  if (event.keyСode === 27) {
     if (searchHotel.classList.contains('hotel-search--show')) {
       event.preventDefault();
       searchHotel.classList.remove('hotel-search--show');
@@ -74,7 +74,7 @@ btnPlus.addEventListener("click", function (event) {
 
   summ.textContent = inputAdult.value;
   summ++;
-  inputAdult.value = summ++;
+  inputAdult.value = summ;
 });
 
 btnMinus.addEventListener("click", function (event) {
@@ -82,7 +82,7 @@ btnMinus.addEventListener("click", function (event) {
 
   summ.textContent = inputAdult.value;
   summ--;
-  inputAdult.value = summ--;
+  inputAdult.value = summ;
 });
 
 
