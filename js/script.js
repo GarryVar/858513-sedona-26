@@ -2,7 +2,6 @@
 var searchHotel = document.querySelector('.hotel-search');
 var searchBtn = document.querySelector('.button--search');
 
-var form = document.querySelector('form');
 
 var inputEntry = searchHotel.querySelector('[name=entry]');
 var inputOut = searchHotel.querySelector('[name=leave]');
@@ -22,25 +21,39 @@ var summAdult = '';
 var summChild = '';
 
 try {
+
   storage = isStorageSupport.getItem('adult', 'child');
 }
 
 catch (err) {
+
   isStorageSupport = false;
 }
+
 
 searchBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
   searchHotel.classList.add('hotel-search--show');
+  searchHotel.classList.remove('hotel-search');
   if (storage) {
     inputEntry.value = storage;
   }
   inputEntry.focus();
 });
 
+searchBtn.addEventListener('click', function (event){
+  event.preventDefault();
 
-form.addEventListener("submit", function (event) {
+    if(searchHotel.classList.contains('hotel-search--show')) {
+
+      searchHotel.classList.add('hotel-search');
+      searchHotel.classList.remove('hotel-search--show');
+    }
+});
+
+
+searchHotel.addEventListener('submit', function (event) {
   event.preventDefault();
 
   if (!inputEntry.value || !inputOut.value) {
@@ -64,16 +77,19 @@ form.addEventListener("submit", function (event) {
 });
 
 window.addEventListener('keydown', function (event) {
-  
-  if (event.keyСode === 27) {
+
+  var key = event.keyСode;
+  if (key === 27) {
+
     if (searchHotel.classList.contains('hotel-search--show')) {
+
       event.preventDefault();
       searchHotel.classList.remove('hotel-search--show');
     }
   }
 });
 
-btnPlusAdult.addEventListener("click", function (event) {
+btnPlusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
   if(inputAdult.value >= 0) {
@@ -85,7 +101,7 @@ btnPlusAdult.addEventListener("click", function (event) {
 
 });
 
-btnMinusAdult.addEventListener("click", function (event) {
+btnMinusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
   if(inputAdult.value != 0) {
@@ -112,7 +128,7 @@ btnPlusChild.addEventListener('click', function(event) {
 btnMinusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
-if(inputChild.value !=0) {
+  if(inputChild.value !=0) {
 
       summChild.textContent = inputChild.value;
       summChild--;
@@ -120,6 +136,7 @@ if(inputChild.value !=0) {
       }
 
 });
+
 
 
 

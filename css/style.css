@@ -112,6 +112,25 @@ body {
   z-index: 2;
 }
 
+.main-nav__item:first-child {
+  width:  240px;
+}
+
+.main-nav__item:last-child,
+.main-nav__item:nth-child(4n + 3){
+  width:  240px;
+  text-align: right;
+}
+
+.main-nav__item:nth-child(4n + 2) {
+  width: 288px;
+}
+
+.main-nav__item:nth-child(4n + 3) {
+  width: 288px;
+}
+
+
 .main-nav__item:focus {
   outline: 0;
 }
@@ -119,7 +138,6 @@ body {
 .main-nav__link {
   display: block;
 
-  width: 128px;
   padding: 20px 0;
 
   font-family: 'PT Sans Bold';
