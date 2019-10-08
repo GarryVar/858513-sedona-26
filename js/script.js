@@ -42,16 +42,6 @@ searchBtn.addEventListener('click', function (event) {
   inputEntry.focus();
 });
 
-searchBtn.addEventListener('click', function (event){
-  event.preventDefault();
-
-    if(searchHotel.classList.contains('hotel-search--show')) {
-
-      searchHotel.classList.add('hotel-search');
-      searchHotel.classList.remove('hotel-search--show');
-    }
-});
-
 
 searchHotel.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -76,15 +66,18 @@ searchHotel.addEventListener('submit', function (event) {
 
 });
 
-window.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', function (event) {
 
-  var key = event.keyСode;
-  if (key === 27) {
+  if (event.keyCode === 27) {
 
     if (searchHotel.classList.contains('hotel-search--show')) {
 
       event.preventDefault();
+
       searchHotel.classList.remove('hotel-search--show');
+      searchHotel.classList.add('hotel-search--hide');
+      searchHotel.classList.add('hotel-search');
+      
     }
   }
 });

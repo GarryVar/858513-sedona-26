@@ -658,6 +658,20 @@ body {
   }
 }
 
+@keyframes drop-up_form {
+  from {
+    transform: translateY(0) translateX(-50%);
+  }
+  to {
+    transform: translateY(-200px) translateX(-50%);
+  }
+}
+
+.hotel-search--hide {
+ animation-name: drop-down_form;
+  animation-duration: 0.3s;
+}
+
 .hotel-search__fieldset {
   margin: 0;
   padding: 0;
@@ -917,6 +931,8 @@ body {
 
 .hotel-search__submit:active {
   color: rgba(255, 255, 255, 0.5);
+
+  background-color: #5496bd;
 
   transition-duration: 0.3s;
   transition-property: color;
