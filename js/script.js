@@ -2,7 +2,6 @@
 var searchHotel = document.querySelector('.hotel-search');
 var searchBtn = document.querySelector('.button--search');
 
-var form = document.querySelector('form');
 
 var inputEntry = searchHotel.querySelector('[name=entry]');
 var inputOut = searchHotel.querySelector('[name=leave]');
@@ -10,80 +9,162 @@ var inputOut = searchHotel.querySelector('[name=leave]');
 var inputAdult = searchHotel.querySelector('[name=adult]');
 var inputChild = searchHotel.querySelector('[name=child]');
 
-var btnPlus = searchHotel.querySelector('.hotel-search__adult-value--plus');
-var btnMinus = searchHotel.querySelector('.hotel-search__adult-value--minus');
+var btnPlusAdult = searchHotel.querySelector('.hotel-search__adult-value--plus');
+var btnMinusAdult = searchHotel.querySelector('.hotel-search__adult-value--minus');
+var btnPlusChild = searchHotel.querySelector('.hotel-search__child-value--plus');
+var btnMinusChild = searchHotel.querySelector('.hotel-search__child-value--minus');
 
 var isStorageSupport = true;
 var storage = '';
 
-var summ = '';
+var summAdult = '';
+var summChild = '';
 
 try {
-  storage = isStorageSupport.getItem('entry')
+
+  storage = isStorageSupport.getItem('adult', 'child');
 }
 
 catch (err) {
+
   isStorageSupport = false;
 }
+
 
 searchBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
-  searchHotel.classList.toggle('hotel-search--show');
-  searchHotel.classList.toggle('hotel-search');
+if(searchHotel.classList.contains('hotel-search--hide')) {
+
+          searchHotel.classList.remove('hotel-search--hide');
+}
+  searchHotel.classList.add('hotel-search--show');
+  searchHotel.classList.remove('hotel-search');
+
   if (storage) {
     inputEntry.value = storage;
   }
   inputEntry.focus();
 });
 
+window.addEventListener('keydown', function (event) {
+
+  if (event.keyCode === 27) {
+
+    if (searchHotel.classList.contains('hotel-search--show')) {
+
+      event.preventDefault();
+      searchHotel.classList.add('hotel-search--hide');
+      searchHotel.classList.add('hotel-search');
+      searchHotel.classList.remove('hotel-search--show');
+      searchHotel.classList.remove('hotel-search--hide'); 
+    }
+  }
+});
 
 
-form.addEventListener("submit", function (event) {
+
+// searchBtn.addEventListener('click', function (event){
+
+
+
+//     if(searchHotel.classList.contains('hotel-search--show')) {
+
+//         event.preventDefault();
+//       searchHotel.classList.add('hotel-search--hide');
+//       searchHotel.classList.add('hotel-search--show');
+//       searchHotel.classList.add('hotel-search');
+//     }
+// });
+
+
+searchHotel.addEventListener('submit', function (event) {
   event.preventDefault();
 
   if (!inputEntry.value || !inputOut.value) {
-    console.log('Форма не отправилась');
+    console.log('Форма не отправилась! Заполните кол-во Взрослых и Детей');
   }
 
   else {
     if (isStorageSupport) {
-      localStorage.setItem('entry', inputEntry.value);
-      localStorage.setItem('leave', inputOut.value);
+      localStorage.setItem('adult', inputAdult.value);
+      localStorage.setItem('child', inputChild.value);
     }
 
-    console.log(inputOut.value);
     console.log(inputEntry.value);
+    console.log(inputOut.value);
+    console.log(inputAdult.value);
+    console.log(inputChild.value);
     console.log('Форма отправилась');
   }
 
 
 });
 
-window.addEventListener('keydown', function (event) {
-  if (event.keyDown === 27) {
-    if (searchHotel.classList.contains('hotel-search--show')) {
-      event.preventDefault();
-      searchHotel.classList.remove('hotel-search--show');
-    }
+
+btnPlusAdult.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if(inputAdult.value >= 0) {
+
+      summAdult.textContent = inputAdult.value;
+      summAdult++;
+      inputAdult.value = summAdult;
   }
+
 });
 
-btnPlus.addEventListener("click", function (event) {
+btnMinusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
-  summ.textContent = inputAdult.value;
-  summ++;
-  inputAdult.value = summ++;
+  if(inputAdult.value != 0) {
+
+      summAdult.textContent = inputAdult.value;
+      summAdult--;
+      inputAdult.value = summAdult;
+  }
+
 });
 
-btnMinus.addEventListener("click", function (event) {
+btnPlusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
-  summ.textContent = inputAdult.value;
-  summ--;
-  inputAdult.value = summ--;
+  if(inputChild.value >=0) {
+
+      summChild.textContent = inputChild.value;
+      summChild++;
+      inputChild.value = summChild;
+  }
+
 });
+
+btnMinusChild.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  if(inputChild.value !=0) {
+
+      summChild.textContent = inputChild.value;
+      summChild--;
+      inputChild.value = summChild;
+      }
+
+});
+
+
+// filter form
+
+// for(var i = 0; i < checkboxFilter.length; i++){
+
+//   checkboxFilter.checked[i]
+// }
+
+// filterForm.addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   if (checkboxFilter.checked[i]. checked) {
+//     alert('ДАДАДАА');
+//   }
+// });
 
 
 
