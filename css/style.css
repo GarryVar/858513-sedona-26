@@ -1070,6 +1070,7 @@ body {
 
 .filter__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   max-width: 1056px;
@@ -1077,12 +1078,16 @@ body {
   margin-right: auto;
 }
 
+.filter__column:first-child {
+  width: 258px;
+}
+
 .filter__column:nth-child(2) {
-  margin-left: 119px;
+  width: 288px;
 }
 
 .filter__column:last-child {
-  margin-left: 334px;
+  margin-left: auto;
   max-width: 318px;
   min-width: 318px;
 }
@@ -1220,7 +1225,7 @@ body {
 .filter__submit {
   display: block;
 
-  padding: 6px 38px;
+  padding: 6px 33px;
   margin: 0px auto 0 86px;
 
   border: 2px solid #fff;
@@ -1305,6 +1310,7 @@ body {
 
 .sort__list {
   display: flex;
+  flex-wrap: wrap;
 
   padding: 0;
   margin: 0;
@@ -1324,6 +1330,8 @@ body {
 }
 
 .sort__link {
+  display: block;
+
   border-bottom: 1px dotted #81b3d2;
 
   color: #cacaca;
