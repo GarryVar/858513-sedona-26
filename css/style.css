@@ -1228,8 +1228,10 @@ body {
 
   background: 0 0;
 
+  color: #fff;
   font-size: 14px;
   line-height: 20px;
+  text-transform: uppercase;
 
   cursor: pointer;
 
