@@ -34,8 +34,13 @@ catch (err) {
 searchBtn.addEventListener('click', function (event) {
   event.preventDefault();
 
+if(searchHotel.classList.contains('hotel-search--hide')) {
+
+  searchHotel.classList.remove('hotel-search--hide');
+}
   searchHotel.classList.add('hotel-search--show');
   searchHotel.classList.remove('hotel-search');
+
   if (storage) {
     inputEntry.value = storage;
   }
@@ -52,6 +57,7 @@ searchHotel.addEventListener('submit', function (event) {
 
   else {
     if (isStorageSupport) {
+
       localStorage.setItem('adult', inputAdult.value);
       localStorage.setItem('child', inputChild.value);
     }
@@ -60,7 +66,7 @@ searchHotel.addEventListener('submit', function (event) {
     console.log(inputOut.value);
     console.log(inputAdult.value);
     console.log(inputChild.value);
-    console.log('Форма отправилась');
+    console.log('Форма отправилась'); 
   }
 
 
@@ -87,50 +93,50 @@ btnPlusAdult.addEventListener('click', function (event) {
 
   if(inputAdult.value >= 0) {
 
-      summAdult.textContent = inputAdult.value;
-      summAdult++;
-      inputAdult.value = summAdult;
+    summAdult.textContent = inputAdult.value;
+    summAdult++;
+    inputAdult.value = summAdult;
   }
 
 });
+
 
 btnMinusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
   if(inputAdult.value != 0) {
 
-      summAdult.textContent = inputAdult.value;
-      summAdult--;
-      inputAdult.value = summAdult;
+    summAdult.textContent = inputAdult.value;
+    summAdult--;
+    inputAdult.value = summAdult;
   }
 
 });
+
 
 btnPlusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
   if(inputChild.value >=0) {
 
-      summChild.textContent = inputChild.value;
-      summChild++;
-      inputChild.value = summChild;
+    summChild.textContent = inputChild.value;
+    summChild++;
+    inputChild.value = summChild;
   }
 
 });
+
 
 btnMinusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
   if(inputChild.value !=0) {
 
-      summChild.textContent = inputChild.value;
-      summChild--;
-      inputChild.value = summChild;
-      }
+    summChild.textContent = inputChild.value;
+    summChild--;
+    inputChild.value = summChild;
+  }
 
 });
-
-
-
 
 
