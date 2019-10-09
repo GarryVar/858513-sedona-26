@@ -56,17 +56,11 @@ searchHotel.addEventListener('submit', function (event) {
   }
 
   else {
-    if (isStorageSupport) {
 
-      localStorage.setItem('adult', inputAdult.value);
-      localStorage.setItem('child', inputChild.value);
-    }
-
-    console.log(inputEntry.value);
-    console.log(inputOut.value);
-    console.log(inputAdult.value);
-    console.log(inputChild.value);
-    console.log('Форма отправилась'); 
+      console.log('Дата заезда [' + inputEntry.value + ']');
+      console.log('Дата выезда [' + inputOut.value + ']');
+      console.log('Взрослые [' + inputAdult.value + ']');
+      console.log('Дети [' + inputChild.value + ']');
   }
 
 
