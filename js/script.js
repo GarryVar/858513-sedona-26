@@ -36,7 +36,7 @@ searchBtn.addEventListener('click', function (event) {
 
 if(searchHotel.classList.contains('hotel-search--hide')) {
 
-          searchHotel.classList.remove('hotel-search--hide');
+  searchHotel.classList.remove('hotel-search--hide');
 }
   searchHotel.classList.add('hotel-search--show');
   searchHotel.classList.remove('hotel-search');
@@ -46,36 +46,6 @@ if(searchHotel.classList.contains('hotel-search--hide')) {
   }
   inputEntry.focus();
 });
-
-window.addEventListener('keydown', function (event) {
-
-  if (event.keyCode === 27) {
-
-    if (searchHotel.classList.contains('hotel-search--show')) {
-
-      event.preventDefault();
-      searchHotel.classList.add('hotel-search--hide');
-      searchHotel.classList.add('hotel-search');
-      searchHotel.classList.remove('hotel-search--show');
-      searchHotel.classList.remove('hotel-search--hide'); 
-    }
-  }
-});
-
-
-
-// searchBtn.addEventListener('click', function (event){
-
-
-
-//     if(searchHotel.classList.contains('hotel-search--show')) {
-
-//         event.preventDefault();
-//       searchHotel.classList.add('hotel-search--hide');
-//       searchHotel.classList.add('hotel-search--show');
-//       searchHotel.classList.add('hotel-search');
-//     }
-// });
 
 
 searchHotel.addEventListener('submit', function (event) {
@@ -87,6 +57,7 @@ searchHotel.addEventListener('submit', function (event) {
 
   else {
     if (isStorageSupport) {
+
       localStorage.setItem('adult', inputAdult.value);
       localStorage.setItem('child', inputChild.value);
     }
@@ -95,76 +66,77 @@ searchHotel.addEventListener('submit', function (event) {
     console.log(inputOut.value);
     console.log(inputAdult.value);
     console.log(inputChild.value);
-    console.log('Форма отправилась');
+    console.log('Форма отправилась'); 
   }
 
 
 });
 
+document.addEventListener('keydown', function (event) {
+
+  if (event.keyCode === 27) {
+
+    if (searchHotel.classList.contains('hotel-search--show')) {
+
+      event.preventDefault();
+
+      searchHotel.classList.remove('hotel-search--show');
+      searchHotel.classList.add('hotel-search--hide');
+      searchHotel.classList.add('hotel-search');
+      
+    }
+  }
+});
 
 btnPlusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
   if(inputAdult.value >= 0) {
 
-      summAdult.textContent = inputAdult.value;
-      summAdult++;
-      inputAdult.value = summAdult;
+    summAdult.textContent = inputAdult.value;
+    summAdult++;
+    inputAdult.value = summAdult;
   }
 
 });
+
 
 btnMinusAdult.addEventListener('click', function (event) {
   event.preventDefault();
 
   if(inputAdult.value != 0) {
 
-      summAdult.textContent = inputAdult.value;
-      summAdult--;
-      inputAdult.value = summAdult;
+    summAdult.textContent = inputAdult.value;
+    summAdult--;
+    inputAdult.value = summAdult;
   }
 
 });
+
 
 btnPlusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
   if(inputChild.value >=0) {
 
-      summChild.textContent = inputChild.value;
-      summChild++;
-      inputChild.value = summChild;
+    summChild.textContent = inputChild.value;
+    summChild++;
+    inputChild.value = summChild;
   }
 
 });
+
 
 btnMinusChild.addEventListener('click', function(event) {
   event.preventDefault();
 
   if(inputChild.value !=0) {
 
-      summChild.textContent = inputChild.value;
-      summChild--;
-      inputChild.value = summChild;
-      }
+    summChild.textContent = inputChild.value;
+    summChild--;
+    inputChild.value = summChild;
+  }
 
 });
-
-
-// filter form
-
-// for(var i = 0; i < checkboxFilter.length; i++){
-
-//   checkboxFilter.checked[i]
-// }
-
-// filterForm.addEventListener('submit', function(event) {
-//   event.preventDefault();
-
-//   if (checkboxFilter.checked[i]. checked) {
-//     alert('ДАДАДАА');
-//   }
-// });
-
 
 
