@@ -1,3 +1,4 @@
+
 var filterForm = document.querySelector('.filter__form');  
 var filterSubmit = filterForm.querySelector('.filter__submit');
 
@@ -6,9 +7,6 @@ var filterPriceMax = filterForm.querySelector('[name=max-price]');
 
 var filterCheckbox = filterForm.querySelectorAll('[type=checkbox]');
 
-for(var i = 0; i < filterCheckbox.length; i++) {
-	filterCheckbox[i];	
-}
 
 	filterForm.addEventListener('submit', function(event) {
 
