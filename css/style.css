@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'PT Sans Normal';
-  src: url('../fonts/ptsans.woff') format('woff'), 
-       url('../fonts/ptsans.woff2') format('woff2');
-  font-weight: 100;
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff2") format("woff2"), 
+       url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PT Sans Bold';
-  src: url('../fonts/ptsansbold.woff') format('woff'), 
-       url('../fonts/ptsansbold.woff2') format('woff2');
-  font-weight: 800;
-  font-style: bold;
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
 
 html {
@@ -27,7 +27,7 @@ body {
 
   background-color: #f2f2f2;
 
-  font-family: 'PT Sans Normal', 'Arial', 'Helvetica', serif;
+  font-family: "PT Sans", "Arial", "Tahoma", sans-serif;
   font-size: 14px;
 }
 
@@ -87,7 +87,7 @@ body {
   padding: 0;
   margin: 0;
   
-  background-color: #fff;
+  background-color: rgb(255,255,255);
 }
 
 .main-header__logo {
@@ -145,8 +145,9 @@ body {
 
   padding: 20px 0;
 
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   font-size: 14px;
+  font-weight: bold;
   color: rgb(0, 0, 0);
   text-decoration: none;
   text-transform: uppercase;
@@ -171,7 +172,7 @@ body {
 
 
 .main {
-  background-color: #fff;
+  background-color: rgb(255,255,255);
 }
 
 .intro__pic {
@@ -181,12 +182,20 @@ body {
   min-height: 509px;
 
   background: linear-gradient(160deg, #a2c4dc, #6b494a);
-  background-image: url(../img/welcome.png), url(../img/polygon.png), url(../img/sedona.jpg);
-  background-position: center 76px, center bottom -1px, 0 -55px;
+  background-image: url("../img/polygon.png"), url("../img/sedona.jpg");
+  background-position: center bottom -1px, 0 -55px;
   background-repeat: no-repeat;
   /*  background-size: 459px 353px, contain, cover;*/
 }
 
+.intro__img {
+  position: relative;
+
+  left: 50%;
+  top: 75px;
+
+  transform: translateX(-50%);
+}
 
 .main__features {
   margin-top: 58px;
@@ -201,9 +210,10 @@ body {
 }
 
 .features__text.features__text--big {
-  font-family: 'PT Sans Bold';
-  line-height: 28px;
+  font-family: "PT Sans";
   font-size: 21px;
+  font-weight: bold;
+  line-height: 28px;
 
   z-index: 10;
 }
@@ -211,7 +221,7 @@ body {
 .features__text, .features__text--narrow {
   margin-top: 28px;
 
-  font-family: 'PT Sans Normal';
+  font-family: "PT Sans";
   font-size: inherit;
 }
 
@@ -249,9 +259,10 @@ body {
   margin-bottom: 32px;
 
 
-  font-family: 'PT Sans Bold';
-  color: #fff;
+  font-family: "PT Sans";
+  color: rgb(255,255,255);
   font-size: 21px;
+  font-weight: bold;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
@@ -260,7 +271,7 @@ body {
 .features__item--type-1 .features__number {
   position: relative;
 
-  color: #fff;
+  color: rgb(255,255,255);
   padding: 0 14px;
   bottom: 8px;
 }
@@ -268,33 +279,33 @@ body {
 .features__item--type-1 .features__number::before {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 8px;
   left: 0;
   width: 9px;
   height: 2px;
-  background-color: #fff;
+  background-color: rgb(255,255,255);
 }
 
 .features__item--type-1 .features__number::after {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 8px;
   right: 0;
   width: 9px;
   height: 2px;
-  background-color: #fff;
+  background-color: rgb(255,255,255);
 }
 
 .features__item--type-1 .features__text {
   margin-top: 18px;
   margin-bottom: 0;
 
-  color: #fff;
-  font-family: 'PT Sans Normal';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
   font-size: 14px;
   text-align: center;
   line-height: 20px;
@@ -318,16 +329,17 @@ body {
 
   color: #000;
   font-size: 21px;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .features__item--type-2 .features__text {
   margin-top: 22px;
   margin-bottom: 0;
 
-  font-family: 'PT Sans Normal';
+  font-family: "PT Sans";
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -345,7 +357,7 @@ body {
 .features__item--type-2 .features__number::before {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 8px;
   left: 0;
@@ -358,7 +370,7 @@ body {
 .features__item--type-2 .features__number::after {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 8px;
   right: 0;
@@ -371,14 +383,14 @@ body {
 .features__item--icon-house::before {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 61px;
   left: 50%;
   width: 75px;
   height: 72px;
 
-  background-image: url('../img/icon-house.svg');
+  background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
 
   transform: translateX(-50%);
@@ -387,7 +399,7 @@ body {
 .features__item--icon-food::before {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 61px;
   left: 50%;
@@ -395,7 +407,7 @@ body {
   width: 75px;
   height: 72px;
 
-  background-image: url('../img/icon-burger.svg');
+  background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
 
   transform: translateX(-50%);
@@ -404,7 +416,7 @@ body {
 .features__item--icon-gift::before {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 61px;
   left: 50%;
@@ -412,7 +424,7 @@ body {
   width: 75px;
   height: 72px;
 
-  background-image: url('../img/icon-gift.svg');
+  background-image: url("../img/icon-gift.svg");
   background-position: 5px 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -447,10 +459,11 @@ body {
   margin-bottom: 29px;
 
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   font-size: 21px;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .features__item--type-3:last-child {
@@ -461,7 +474,7 @@ body {
   margin-top: 15px;
   margin-bottom: 0;
 
-  font-family: 'PT Sans Normal';
+  font-family: "PT Sans";
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -472,6 +485,7 @@ body {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
 
   bottom: 11px;
   padding: 0 12px;
@@ -481,7 +495,7 @@ body {
 
 .features__item--type-3 .features__number::before {
   position: absolute;
-  content: '';
+  content: "";
 
   top: 8px;
   left: 0;
@@ -494,7 +508,7 @@ body {
 
 .features__item--type-3 .features__number::after {
   position: absolute;
-  content: '';
+  content: "";
 
   top: 8px;
   right: 0;
@@ -530,8 +544,9 @@ body {
 .search__text--big {
   margin-top: 51px;
 
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   font-size: 30px;
+  font-weight: bold;
 }
 
 .search__text--narrow {
@@ -557,11 +572,12 @@ body {
 
   background-color: #766357;
 
-  color: #fff;
-  font-family: 'PT Sans Bold';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
   font-size: 21px;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bold;
 
 
   transition: ease .3s;
@@ -623,11 +639,12 @@ body {
   width: 570px;
   padding: 55px;
 
-  background-color: #fff;
+  background-color: rgb(255,255,255);
   box-shadow: 0 0 20px 0px #838282;
 
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   text-transform: uppercase;
+  font-weight: bold;
 
   transform: translateX(-50%);
 
@@ -644,10 +661,11 @@ body {
   width: 570px;
   padding: 55px;
 
-  background-color: #fff;
+  background-color: rgb(255,255,255);
   box-shadow: 0 0 20px 0px #838282;
 
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 
   transform: translateX(-50%);
@@ -737,7 +755,7 @@ body {
 .hotel-search__calendar {
   position: absolute;
 
-  content: '';
+  content: "";
 
   top: 50%;
   right: 7px;
@@ -788,7 +806,7 @@ body {
 }
 
 .hotel-search__input:active {
-  background-color: #fff;
+  background-color: rgb(255,255,255);
   box-shadow: 0 0 0 2px #e5e5e5;
 
   transition-duration: 0.3s;
@@ -797,31 +815,36 @@ body {
 
 .hotels-search__input::-webkit-input-placeholder {
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::-moz-placeholder {
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input:-ms-input-placeholder {
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::-ms-input-placeholder {
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::placeholder {
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -898,7 +921,7 @@ body {
 .hotel-search__child-value--minus::before {
   position: absolute;
 
-  content: '-';
+  content: "-";
 
   top: 50%;
   left: 50%;
@@ -913,7 +936,7 @@ body {
 .hotel-search__child-value--plus::before  {
   position: absolute;
 
-  content: '+';
+  content: "+";
 
   top: 50%;
   left: 50%;
@@ -972,7 +995,7 @@ body {
 
   background-color: #81b3d2;
 
-  color: #fff;
+  color: rgb(255,255,255);
   font-size: 21px;
   text-transform: uppercase;
 
@@ -1000,7 +1023,7 @@ body {
   padding-bottom: 18px;
 
   background: linear-gradient(90deg, #4f7ca5, #4f4847);
-  background-image: url('../img/sedona-blur.jpg');
+  background-image: url("../img/sedona-blur.jpg");
   background-position: 0 -56px;
   background-size: cover;
 }
@@ -1008,8 +1031,8 @@ body {
 .filter__content .filter__label {
   margin-left: 7px;
 
-  color: #fff;
-  font-family: 'PT Sans Normal';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -1037,10 +1060,11 @@ body {
 .filter__selection--type-1 .filter__caption {
   margin-bottom: 19px;
 
-  color: #fff;
-  font-family: 'PT Sans Bold';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
   font-size: 16px;
   line-height: 11px;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -1085,12 +1109,12 @@ body {
   width: 24px;
   height: 24px;
 
-  background-image: url('../img/checkobox-on.svg');
+  background-image: url("../img/checkobox-on.svg");
   background-repeat: no-repeat;
 }
 
 .filter__checkbox:focus+.filter__check {
-  outline: 1px dotted #fff;
+  outline: 1px dotted rgb(255,255,255);
   outline-offset: 4px;
 }
 
@@ -1103,7 +1127,7 @@ body {
   width: 24px;
   height: 24px;
 
-  background-image: url('../img/checkobox-off.svg');
+  background-image: url("../img/checkobox-off.svg");
   background-repeat: no-repeat;
 
   z-index: 0;
@@ -1140,7 +1164,7 @@ body {
   padding: 0;
   margin: 0;
 
-  color: #ffffff;
+  color: rgb(255,255,255);
   text-transform: uppercase;
   border: none;
 }
@@ -1148,9 +1172,10 @@ body {
 .filter-range__caption {
   margin-bottom: 16px;
 
-  color: #fff;
-  font-family: 'PT Sans Bold';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
   font-size: 16px;
+  font-weight: bold;
   line-height: 11px;
   text-transform: uppercase;
 }
@@ -1166,7 +1191,7 @@ body {
   width: 100%;
   height: 36px;
 
-  border: 2px solid #ffffff;
+  border: 2px solid rgb(255,255,255);
   border-radius: 2px;
 
   font-size: 0;
@@ -1183,7 +1208,7 @@ body {
   width: 2px;
   height: 22px;
 
-  background: #ffffff;
+  background-color: rgb(255,255,255);
 
   transform: translate(-50%, -50%);
 }
@@ -1216,7 +1241,7 @@ body {
 }
 
 .range-price__input:focus {
-  outline: 1px dotted #fff;
+  outline: 1px dotted rgb(255,255,255);
 }
 
 .filter-range__controls {
@@ -1235,7 +1260,7 @@ body {
   width: 80%;
   height: 2px;
 
-  background: #ffffff;
+  background-color: rgb(255,255,255);
 }
 
 .filter-range__toggle {
@@ -1246,7 +1271,7 @@ body {
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  border: 8px solid #fff;
+  border: 8px solid rgb(255,255,255);
 
   background-color: #888888;
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, .2);
@@ -1271,12 +1296,12 @@ body {
   padding: 6px 33px;
   margin: 0px auto 0 86px;
 
-  border: 2px solid #fff;
+  border: 2px solid  rgb(255,255,255);
   border-radius: 2px;
 
   background: 0 0;
 
-  color: #fff;
+  color: rgb(255,255,255);
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -1288,16 +1313,16 @@ body {
 }
 
 .filter__submit:hover {
-  background-color: #fff;
+  background-color: rgb(255,255,255);
 
   color: #000;
   transition-duration: 0.4s;
 }
 
 .filter__submit:focus {
-  outline: 1px dotted #fff;
+  outline: 1px dotted rgb(255,255,255);
   outline-offset: 4px;
-  background-color: #fff;
+  background-color: rgb(255,255,255);
   color: #000;
 
   transition-duration: 0.4s;
@@ -1330,8 +1355,9 @@ body {
 }
 
 .sort__text {
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   font-size: 21px;
+  font-weight: bold;
   color: #000;
   text-transform: uppercase;
   margin-right: 50px;
@@ -1475,7 +1501,7 @@ body {
   padding: 29px 0;
   margin-bottom: 1px;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .hotels__row {
@@ -1518,8 +1544,9 @@ body {
   margin: 0;
 
   color: #000;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
   font-size: 21px;
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -1570,8 +1597,9 @@ body {
   padding-left: 17px;
   padding-right: 17px;
 
-  color: #fff;
-  font-family: 'PT Sans Bold';
+  color: rgb(255,255,255);
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -1624,7 +1652,7 @@ body {
   display: block;
 
   padding-top: 5px;
-  padding-bottom: 6px; 
+  padding-bottom: 6px;  
   padding-left: 16px;
   padding-right: 13px;
 
@@ -1643,14 +1671,17 @@ body {
 
 .rating__star {
   display: inline-block;
+  vertical-align: middle;
 
   margin: 0 1px;
 
   width: 20px;
   height: 17px;
 
-  background-image: url('../img/star.svg');
+  background-image: url("../img/star.svg");
   background-repeat: no-repeat;
+
+  font-size: 0;
 }
 
 
@@ -1684,7 +1715,8 @@ body {
 
   color: #000;
   font-size: 21px;
-  font-family: 'PT Sans Bold';
+  font-family: "PT Sans";
+  font-weight: bold;
   text-transform: uppercase;
 }
 

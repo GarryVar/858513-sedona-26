@@ -13,8 +13,12 @@
 
     <header class="main-header">
 
-      <a class="main-header__logo" href="index.html">
-        <img src="img/logo.png"   alt="Логотип Седона"  width="140"   height="72"   title="На главную">
+      <a class="main-header__logo">
+        <img src="img/logo.png"   
+             alt="Логотип Седона"  
+             width="140"   
+             height="72"   
+             title="На главную">
       </a>
 
       <nav class="main-nav" aria-label="Prymari">
@@ -50,6 +54,11 @@
 
       <div class="intro  main__intro">
         <div class="intro__pic">
+          <img class="intro__img"  
+               src="img/welcome.png"  
+               alt="Welcome to the gorgeous Sedona"  
+               width="459"  
+               height="353">
         </div>
       </div>
 
@@ -201,11 +210,11 @@
 
           <a href="https://www.google.ru/maps/place/Седона,+Аризона+86336,+США/@34.8544438,-111.8301581,13z/data=!3m1!4b1!4m5!3m4!1s0x872da132f942b00d:0x5548c523fa6c8efd!8m2!3d34.8697395!4d-111.7609896"
              title="Перейти нак карту google maps">
-            <img  src="img/map.png" alt="Карта Седоны">
+            <img  src="img/map.png" alt="Карта Седоны" width="1200" height="596">
           </a>
 
           <!-- Форма поиска гостиницы -->
-          <form class="hotel-search" action="#" method="post">
+          <form class="hotel-search" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="hotel-search__fieldset">
               <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
 
@@ -219,7 +228,7 @@
                          placeholder="дд.мм.гггг">
                 </label>
 
-                <button class="button  hotel-search__calendar">
+                <button class="button  hotel-search__calendar" type="button">
                   <!-- svg -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#cacaca">
                     <path
@@ -241,7 +250,7 @@
                          name="leave" 
                          placeholder="дд.мм.гггг">
                 </label>
-                <button class="button  hotel-search__calendar">
+                <button class="button  hotel-search__calendar" type="button">
                   <!-- svg -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#cacaca">
                     <path
@@ -298,7 +307,7 @@
               </div>
 
               <!-- hotel-search__submit -->
-              <button class="button  hotel-search__submit">Найти</button>
+              <button class="button  hotel-search__submit" type="submit">Найти</button>
             </fieldset>
           </form>
         </div>
