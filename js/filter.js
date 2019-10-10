@@ -1,27 +1,31 @@
-var filterForm = document.querySelector('.filter__form');
-var filterSubmit = filterForm.querySelector('.filter__submit'); 
+
+var filterForm = document.querySelector('.filter__form');  
+var filterSubmit = filterForm.querySelector('.filter__submit');
+
+var filterPriceMin = filterForm.querySelector('[name=min-price]');
+var filterPriceMax = filterForm.querySelector('[name=max-price]');
 
 var filterCheckbox = filterForm.querySelectorAll('[type=checkbox]');
 
-var filterMinPrice = filterForm.querySelector('[name=min-price]');
-var filterMaxPrice = filterForm.querySelector('[name=max-price]');
 
-for (var i = 0; i < filterCheckbox.length; i++) {	
+	filterForm.addEventListener('submit', function(event) {
 
-		filterForm.addEventListener('submit', function(event) {
+		event.preventDefault(); 
 
-		event.preventDefault();
+			if (!filterPriceMin.value || !filterPriceMax.value) {
 
-		if (!filterMinPrice.value || !filterMaxPrice.value && !filterCheckbox[i].checked) {
+					alert('Форма не отправилась!!!');
 
-		alert('Введите данные');	
-		}
-		
-		else if (filterMinPrice.value || filterCheckbox[i].checked) {
-					alert(filterMinPrice.value);	
-		}
+				
+			} 
+			else {
 
+				console.log('Стоимость от ' + filterPriceMin.value + ' рублей.');
+				console.log('Стоимость до ' + filterPriceMax.value + ' рублей.');
+
+				for(var i = 0; i < filterCheckbox.length; i++) {
+					console.log(filterCheckbox[i].checked  && filterCheckbox[i].name);
+
+				}		
+			}
 	});
-}
-
-
