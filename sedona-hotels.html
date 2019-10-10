@@ -77,9 +77,9 @@
 
 
                   <div class="filter__inner">
-                    <input class="filter__checkbox  visually-hidden" type="checkbox" id="wifi" name="wifi">
+                    <input class="filter__checkbox  visually-hidden" type="checkbox" id="wifi" name="wifi" disabled>
                     <span class="filter__check"></span>
-                    <label class="filter__label" for="wifi">wi-fi</label>
+                    <label class="filter__label" for="wifi">wi-fi</label> 
                   </div>
 
                 </fieldset>
@@ -104,7 +104,7 @@
 
 
                   <div class="filter__inner">
-                    <input class="filter__checkbox  visually-hidden" type="checkbox" id="aparts" name="aparts" checked>
+                    <input class="filter__checkbox  visually-hidden" type="checkbox" id="aparts" name="aparts" checked disabled>
                     <span class="filter__check"></span>
                     <label class="filter__label" for="aparts">Апартаменты</label>
                   </div>
@@ -177,7 +177,7 @@
 
                     <div class="sort__button-group">
 
-                      <button class="button   sort__button  sort__button--down" type="button">По убыванию
+                      <button class="button   sort__button  sort__button--up" type="button">По убыванию
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
                         <path fill="#cacaca" d="M5.5 0L0 10h11z" />
@@ -185,7 +185,7 @@
 
                       </button>
 
-                      <button class="button sort__button  sort__button--up" type="button">По возрастанию
+                      <button class="button sort__button  sort__button--down  sort__button--active" type="button">По возрастанию
 
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
                         <path fill="#cacaca" d="M5.5 10L0 0h11" />

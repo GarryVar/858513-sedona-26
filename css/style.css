@@ -1117,9 +1117,26 @@ body {
   width: 24px;
   height: 24px;
 
-  background-image: url("../img/checkobox-on.svg");
+  background-image: url("../img/checkobox-on.svg"); 
   background-repeat: no-repeat;
 }
+
+.filter__checkbox:disabled+.filter__check {
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../img/checkobox-off-disabled.svg");
+  background-repeat: no-repeat;
+}
+
+.filter__checkbox:checked:disabled+.filter__check {
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../img/checkobox-on-disabled.svg");
+  background-repeat: no-repeat;
+}
+
 
 .filter__checkbox:focus+.filter__check {
   outline: 1px dotted rgb(255,255,255);
@@ -1479,6 +1496,9 @@ body {
   transition: ease 0.3s;
 }
 
+.sort__button--active path {
+  fill: #81b3d2;
+}
 
 .main__search {
   display: flex;
