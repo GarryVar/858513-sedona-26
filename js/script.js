@@ -36,10 +36,10 @@ searchBtn.addEventListener("click", function (event) {
 
 if(searchHotel.classList.contains("hotel-search--hide")) {
 
-  searchHotel.classList.remove("hotel-search--hide");
+  searchHotel.classList.toggle("hotel-search--hide");
 }
-  searchHotel.classList.add("hotel-search--show");
-  searchHotel.classList.remove("hotel-search");
+  searchHotel.classList.toggle("hotel-search--show");
+  searchHotel.classList.toggle("hotel-search");
 
   if (storage) {
     inputEntry.value = storage;
