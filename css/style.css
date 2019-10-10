@@ -84,7 +84,6 @@ body {
 }
 
 
-
 .main-header {
   padding: 0;
   margin: 0;
@@ -103,7 +102,6 @@ body {
 }
 
 
-
 .main-nav__list {
   position: relative;
 
@@ -118,34 +116,34 @@ body {
   list-style: none;
   z-index: 2;
 }
+.main-nav__item {
+  width: 20%;
+}
 
-.main-nav__item:first-child {
-  width:  240px;
+
+.main-nav__item:nth-child(2) {
+  margin-right: 115px;
 }
 
 .main-nav__item:last-child,
 .main-nav__item:nth-child(4n + 3) {
-  width:  240px;
   text-align: right;
 }
 
-.main-nav__item:nth-child(4n + 2) {
+/* .main-nav__item:nth-child(4n + 3) {
   width: 288px;
-}
-
-.main-nav__item:nth-child(4n + 3) {
-  width: 288px;
-}
-
+} */ 
 
 .main-nav__item:focus {
   outline: 0;
 }
 
 .main-nav__link {
-  display: block;
+  display: inline-block;
 
   padding: 20px 0;
+
+  vertical-align: middle;
 
   font-family: "PT Sans";
   font-size: 14px;
@@ -171,8 +169,6 @@ body {
   color: #766357;
 }
 
-
-
 .main {
   background-color: rgb(255,255,255);
 }
@@ -184,7 +180,7 @@ body {
   min-height: 509px;
 
   background: linear-gradient(160deg, #a2c4dc, #6b494a);
-  background-image: url("../img/polygon.png"), url("../img/sedona.jpg");
+  background-image: url("../img/polygon.svg"), url("../img/sedona.jpg");
   background-position: center bottom -1px, 0 -55px;
   background-repeat: no-repeat;
   /*  background-size: 459px 353px, contain, cover;*/
@@ -194,7 +190,7 @@ body {
   position: relative;
 
   left: 50%;
-  top: 75px;
+  top: 77px;
 
   transform: translateX(-50%);
 }
@@ -731,6 +727,7 @@ body {
   padding: 0;
 
   border: none;
+
 }
 
 .hotel-search__date {
@@ -796,6 +793,7 @@ body {
   transition-duration: 0.3s;
   transition-property: background-color;
 }
+
 
 .hotel-search__input:focus {
   outline: 1px dotted #222;
@@ -899,6 +897,11 @@ body {
   text-align: center;
 }
 
+.hotel-search__person-category .hotel-search__input[name="child"] {
+  margin: 0;
+  margin-left: 27px;
+}
+ 
 .hotel-search__adult-value,
 .hotel-search__child-value{
   position: absolute;
@@ -1665,10 +1668,13 @@ body {
   padding-left: 16px;
   padding-right: 13px;
 
+
   background-color: #f2f2f2;
 
   color: #666;
+  text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .rating__star-group {
@@ -1710,7 +1716,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 38px 0;
+  padding: 43px 0;
 }
 
 .main-footer__column {
