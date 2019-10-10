@@ -21,7 +21,7 @@ html {
 *, ::before, ::after {
   box-sizing: inherit;
 }
-
+ 
 body {
   margin: 0;
 
@@ -86,6 +86,7 @@ body {
 .main-header {
   padding: 0;
   margin: 0;
+  
   background-color: #fff;
 }
 
@@ -422,7 +423,7 @@ body {
 .features__item--type-2 .features__content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
 }
 
 .features__item--type-3 {
@@ -651,14 +652,27 @@ body {
 
   transform: translateX(-50%);
 
-  animation-name: drop-down_form;
-  animation-duration: 0.3s;
+  -webkit-animation-name: drop-down_form;
+
+          animation-name: drop-down_form;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 
   z-index: 2;
 }
 
 .hotel-search--hide {
-  animation-name: drop-down_form
+  -webkit-animation-name: drop-down_form;
+          animation-name: drop-down_form
+}
+
+@-webkit-keyframes drop-down_form {
+  from {
+    transform: translateY(-200px) translateX(-50%);
+  }
+  to {
+    transform: translateY(0px) translateX(-50%);
+  }
 }
 
 @keyframes drop-down_form {
@@ -667,6 +681,16 @@ body {
   }
   to {
     transform: translateY(0px) translateX(-50%);
+  }
+}
+
+
+@-webkit-keyframes drop-up_form {
+  from {
+    transform: translateY(0px) translateX(-50%);
+  }
+  to {
+    transform: translateY(-220px) translateX(-50%);
   }
 }
 
@@ -769,6 +793,30 @@ body {
 
   transition-duration: 0.3s;
   transition-property: background-color;
+}
+
+.hotels-search__input::-webkit-input-placeholder {
+  color: #000;
+  font-family: 'PT Sans Bold';
+  text-transform: uppercase;
+}
+
+.hotels-search__input::-moz-placeholder {
+  color: #000;
+  font-family: 'PT Sans Bold';
+  text-transform: uppercase;
+}
+
+.hotels-search__input:-ms-input-placeholder {
+  color: #000;
+  font-family: 'PT Sans Bold';
+  text-transform: uppercase;
+}
+
+.hotels-search__input::-ms-input-placeholder {
+  color: #000;
+  font-family: 'PT Sans Bold';
+  text-transform: uppercase;
 }
 
 .hotels-search__input::placeholder {
@@ -1407,6 +1455,12 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+/*map*/
+.map__google {
+  border: none;
+}
+/*map*/
 
 /* --- hotels --- */
 
