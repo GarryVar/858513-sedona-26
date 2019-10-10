@@ -31,20 +31,22 @@ catch (err) {
 }
 
 
+window.addEventListener('load', function() {
+  if (searchHotel.classList.contains("hotel-search")) {
+    searchHotel.classList.remove("hotel-search");
+    }
+});
+
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
-if(searchHotel.classList.contains("hotel-search--hide")) {
 
-  searchHotel.classList.toggle("hotel-search--hide");
-}
-  searchHotel.classList.toggle("hotel-search--show");
   searchHotel.classList.toggle("hotel-search");
+  searchHotel.classList.toggle("hotel-search--show");
 
   if (storage) {
     inputEntry.value = storage;
   }
-  inputEntry.focus();
 });
 
 
@@ -52,7 +54,7 @@ searchHotel.addEventListener("submit", function (event) {
   event.preventDefault();
 
   if (!inputEntry.value || !inputOut.value) {
-    console.log("Форма не отправилась! Заполните кол-во Взрослых и Детей");
+    console.log("Форма не отправилась! Заполните кол-во Взрослых и Детей"); 
   }
 
   else {
@@ -66,7 +68,7 @@ searchHotel.addEventListener("submit", function (event) {
 
 });
 
-document.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", function (event) {
 
   if (event.keyCode === 27) {
 
@@ -75,7 +77,6 @@ document.addEventListener("keydown", function (event) {
       event.preventDefault();
 
       searchHotel.classList.remove("hotel-search--show");
-      searchHotel.classList.add("hotel-search--hide");
       searchHotel.classList.add("hotel-search");
       
     }

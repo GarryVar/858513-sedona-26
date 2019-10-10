@@ -120,7 +120,6 @@ body {
   width: 20%;
 }
 
-
 .main-nav__item:nth-child(2) {
   margin-right: 115px;
 }
@@ -631,8 +630,6 @@ body {
 .hotel-search {
   position: absolute;
 
-  display: none;
-
   top: 0;
   left: 50%;
 
@@ -673,8 +670,8 @@ body {
   -webkit-animation-name: drop-down_form;
 
           animation-name: drop-down_form;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
 
   z-index: 2;
 }
@@ -686,7 +683,7 @@ body {
 
 @-webkit-keyframes drop-down_form {
   from {
-    transform: translateY(-200px) translateX(-50%);
+    transform: translateY(-500px) translateX(-50%);
   }
   to {
     transform: translateY(0px) translateX(-50%);
@@ -695,7 +692,7 @@ body {
 
 @keyframes drop-down_form {
   from {
-    transform: translateY(-200px) translateX(-50%);
+    transform: translateY(-500px) translateX(-50%);
   }
   to {
     transform: translateY(0px) translateX(-50%);
@@ -703,7 +700,7 @@ body {
 }
 
 
-@-webkit-keyframes drop-up_form {
+/* @-webkit-keyframes drop-up_form {
   from {
     transform: translateY(0px) translateX(-50%);
   }
@@ -721,7 +718,7 @@ body {
     transform: translateY(-220px) translateX(-50%);
   }
 }
-
+ */
 .hotel-search__fieldset {
   margin: 0;
   padding: 0;
@@ -1221,7 +1218,7 @@ body {
 
   background-color: rgb(255,255,255);
 
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
 }
 
 .range-price__label {
@@ -1248,7 +1245,6 @@ body {
   background: none;
 
   color: inherit;
-  font: inherit;
 }
 
 .range-price__input:focus {
@@ -1338,8 +1334,6 @@ body {
 
   transition-duration: 0.4s;
 }
-
-
 
 .sort.filter__sort {
   display: flex;
@@ -1716,7 +1710,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 43px 0;
+  padding: 36px 0;
 }
 
 .main-footer__column {
