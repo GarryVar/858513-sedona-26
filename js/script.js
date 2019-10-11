@@ -1,28 +1,29 @@
 
-var searchHotel = document.querySelector('.hotel-search');
-var searchBtn = document.querySelector('.button--search');
+var searchHotel = document.querySelector(".hotel-search");
+var searchBtn = document.querySelector(".button--search");
 
 
-var inputEntry = searchHotel.querySelector('[name=entry]');
-var inputOut = searchHotel.querySelector('[name=leave]');
+var inputEntry = searchHotel.querySelector("[name=entry]");
+var inputOut = searchHotel.querySelector("[name=leave]");
 
-var inputAdult = searchHotel.querySelector('[name=adult]');
-var inputChild = searchHotel.querySelector('[name=child]');
+var inputAdult = searchHotel.querySelector("[name=adult]");
+var inputChild = searchHotel.querySelector("[name=child]");
 
-var btnPlusAdult = searchHotel.querySelector('.hotel-search__adult-value--plus');
-var btnMinusAdult = searchHotel.querySelector('.hotel-search__adult-value--minus');
-var btnPlusChild = searchHotel.querySelector('.hotel-search__child-value--plus');
-var btnMinusChild = searchHotel.querySelector('.hotel-search__child-value--minus');
+var btnPlusAdult = searchHotel.querySelector(".hotel-search__adult-value--plus");
+var btnMinusAdult = searchHotel.querySelector(".hotel-search__adult-value--minus");
+var btnPlusChild = searchHotel.querySelector(".hotel-search__child-value--plus");
+var btnMinusChild = searchHotel.querySelector(".hotel-search__child-value--minus");
+
 
 var isStorageSupport = true;
-var storage = '';
+var storage = "";
 
-var summAdult = '';
-var summChild = '';
+var summAdult = "";
+var summChild = "";
 
 try {
 
-  storage = isStorageSupport.getItem('adult', 'child');
+  storage = isStorageSupport.getItem("adult", "child");
 }
 
 catch (err) {
@@ -31,60 +32,59 @@ catch (err) {
 }
 
 
-searchBtn.addEventListener('click', function (event) {
+searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
-if(searchHotel.classList.contains('hotel-search--hide')) {
 
-  searchHotel.classList.remove('hotel-search--hide');
-}
-  searchHotel.classList.add('hotel-search--show');
-  searchHotel.classList.remove('hotel-search');
+    searchHotel.classList.toggle("hotel-search--hide");
+    searchHotel.classList.toggle("hotel-search");
+    searchHotel.classList.remove("hotel-search--error");
 
-  if (storage) {
-    inputEntry.value = storage;
-  }
-  inputEntry.focus();
+    if (storage) {
+      inputAdult.value = storage;
+      inputChild.focus()
+    }
+    else  inputAdult.focus();
 });
 
 
-searchHotel.addEventListener('submit', function (event) {
-  event.preventDefault();
+searchHotel.addEventListener("submit", function (event) {
 
-  if (!inputEntry.value || !inputOut.value) {
-    console.log('Форма не отправилась! Заполните кол-во Взрослых и Детей');
+  if (!inputEntry.value || !inputOut.value || !inputAdult || !inputChild) {
+
+    event.preventDefault();
+    searchHotel.classList.remove("hotel-search--error");
+    searchHotel.offsetWidth = searchHotel.offsetWidth;
+    searchHotel.classList.add("hotel-search--error"); 
+    inputEntry.focus();
   }
 
   else {
-
-      console.log('Дата заезда [' + inputEntry.value + ']');
-      console.log('Дата выезда [' + inputOut.value + ']');
-      console.log('Взрослые [' + inputAdult.value + ']');
-      console.log('Дети [' + inputChild.value + ']');
+    if (isStorageSupport) {
+      localStorage.setItem("adult", inputAdult.value);
+    }
   }
 
 
 });
 
-document.addEventListener('keydown', function (event) {
+window.addEventListener("keydown", function (event) {
 
   if (event.keyCode === 27) {
 
-    if (searchHotel.classList.contains('hotel-search--show')) {
+    if (searchHotel.classList.contains("hotel-search")) {
 
-      event.preventDefault();
 
-      searchHotel.classList.remove('hotel-search--show');
-      searchHotel.classList.add('hotel-search--hide');
-      searchHotel.classList.add('hotel-search');
+      searchHotel.classList.toggle("hotel-search--hide");
+      searchHotel.classList.toggle("hotel-search");
+      searchHotel.classList.remove("hotel-search--error");
       
     }
   }
 });
 
-btnPlusAdult.addEventListener('click', function (event) {
+btnPlusAdult.addEventListener("click", function (event) {
   event.preventDefault();
-
   if(inputAdult.value >= 0) {
 
     summAdult.textContent = inputAdult.value;
@@ -95,7 +95,7 @@ btnPlusAdult.addEventListener('click', function (event) {
 });
 
 
-btnMinusAdult.addEventListener('click', function (event) {
+btnMinusAdult.addEventListener("click", function (event) {
   event.preventDefault();
 
   if(inputAdult.value != 0) {
@@ -108,7 +108,7 @@ btnMinusAdult.addEventListener('click', function (event) {
 });
 
 
-btnPlusChild.addEventListener('click', function(event) {
+btnPlusChild.addEventListener("click", function(event) {
   event.preventDefault();
 
   if(inputChild.value >=0) {
@@ -121,7 +121,7 @@ btnPlusChild.addEventListener('click', function(event) {
 });
 
 
-btnMinusChild.addEventListener('click', function(event) {
+btnMinusChild.addEventListener("click", function(event) {
   event.preventDefault();
 
   if(inputChild.value !=0) {
