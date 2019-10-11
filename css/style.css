@@ -643,14 +643,22 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 
+
+  -webkit-animation-name: drop-down_form;
+
+          animation-name: drop-down_form;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+
+
   transform: translateX(-50%);
 
 }
 
-.hotel-search--show {
+.hotel-search--hide {
   position: absolute;
 
-  display: block;
+  display: none;
 
   top: 0;
   left: 50%;
@@ -667,19 +675,15 @@ body {
 
   transform: translateX(-50%);
 
-  -webkit-animation-name: drop-down_form;
-
-          animation-name: drop-down_form;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
-
   z-index: 2;
 }
 
-.hotel-search--hide {
-  -webkit-animation-name: drop-down_form;
-          animation-name: drop-down_form
+
+.hotel-search--error {
+  animation-name: form_error;
+  animation-duration: 0.3s;
 }
+
 
 @-webkit-keyframes drop-down_form {
   from {
@@ -698,6 +702,32 @@ body {
     transform: translateY(0px) translateX(-50%);
   }
 }
+
+@keyframes form_error {
+  0%,
+  100% {
+    transform: rotate(0) translateX(-50%);
+    transform-origin: 0 50% 0;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+     transform: rotate(-1deg) translateX(-50%);
+     transform-origin: 0 50% 0;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+      transform: rotate(1deg) translateX(-50%);
+      transform-origin: 0 50% 0;
+  }
+}
+
+
 
 
 /* @-webkit-keyframes drop-up_form {
@@ -1005,6 +1035,7 @@ body {
 
   color: rgb(255,255,255);
   font-size: 21px;
+  font-weight: bold;
   text-transform: uppercase;
 
   transition-duration: 0.3s;

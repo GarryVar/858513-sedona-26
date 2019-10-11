@@ -30,19 +30,13 @@ catch (err) {
   isStorageSupport = false;
 }
 
-
-window.addEventListener('load', function() {
-  if (searchHotel.classList.contains("hotel-search")) {
-    searchHotel.classList.remove("hotel-search");
-    }
-});
-
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
 
 
   searchHotel.classList.toggle("hotel-search");
-  searchHotel.classList.toggle("hotel-search--show");
+  searchHotel.classList.toggle("hotel-search--hide");
+  searchHotel.classList.remove('hotel-search--error');
 
   if (storage) {
     inputEntry.value = storage;
@@ -51,18 +45,22 @@ searchBtn.addEventListener("click", function (event) {
 
 
 searchHotel.addEventListener("submit", function (event) {
-  event.preventDefault();
 
   if (!inputEntry.value || !inputOut.value) {
-    console.log("Форма не отправилась! Заполните кол-во Взрослых и Детей"); 
+    event.preventDefault();
+
+    inputEntry.focus(); 
+    
+    searchHotel.classList.remove('hotel-search--error');
+    searchHotel.offsetWidth =  searchHotel.offsetWidth;
+    searchHotel.classList.add('hotel-search--error');
   }
 
   else {
-
-      console.log("Дата заезда [" + inputEntry.value + "]");
-      console.log("Дата выезда [" + inputOut.value + "]");
-      console.log("Взрослые [" + inputAdult.value + "]");
-      console.log("Дети [" + inputChild.value + "]");
+     if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+      }
+    
   }
 
 
@@ -72,12 +70,13 @@ window.addEventListener("keydown", function (event) {
 
   if (event.keyCode === 27) {
 
-    if (searchHotel.classList.contains("hotel-search--show")) {
+    if (searchHotel.classList.contains("hotel-search--hide")) {
 
       event.preventDefault();
 
-      searchHotel.classList.remove("hotel-search--show");
+      searchHotel.classList.remove("hotel-search--hide");
       searchHotel.classList.add("hotel-search");
+      earchHotel.classList.remove('hotel-search--error');
       
     }
   }
