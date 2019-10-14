@@ -34,7 +34,7 @@ body {
 }
 
 *:focus {
-  outline: 1px dotted #222;
+  outline: 1px dotted #222222;
   outline-offset: 4px;
 }
 
@@ -325,7 +325,7 @@ body {
 .features__item--type-2 .features__title {
   margin: 0;
 
-  color: #000;
+  color: #000000;
   font-size: 21px;
   font-family: "PT Sans";
   text-align: center;
@@ -456,7 +456,7 @@ body {
   margin: 0;
   margin-bottom: 29px;
 
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-size: 21px;
   text-align: center;
@@ -534,7 +534,7 @@ body {
 }
 
 .search__text {
-  color: #000;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
 }
@@ -754,27 +754,6 @@ body {
 }
 
 
-
-
-/* @-webkit-keyframes drop-up_form {
-  from {
-    transform: translateY(0px) translateX(-50%);
-  }
-  to {
-    transform: translateY(-220px) translateX(-50%);
-  }
-}
-
-
-@keyframes drop-up_form {
-  from {
-    transform: translateY(0px) translateX(-50%);
-  }
-  to {
-    transform: translateY(-220px) translateX(-50%);
-  }
-}
- */
 .hotel-search__fieldset {
   margin: 0;
   padding: 0;
@@ -823,7 +802,7 @@ body {
 
 .hotel-search__calendar:hover svg, 
 .hotel-search__calendar:focus svg {
-  fill: #000000;
+  fill: #000000000;
 }
 
 .hotel-search__calendar:active svg {
@@ -849,7 +828,7 @@ body {
 
 
 .hotel-search__input:focus {
-  outline: 1px dotted #222;
+  outline: 1px dotted #222222;
   outline-offset: 4px;
   background-color: rgb(255,255,255);
   box-shadow: 0 0 0 2px #e5e5e5;
@@ -872,35 +851,35 @@ body {
 }
 
 .hotels-search__input::-webkit-input-placeholder {
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::-moz-placeholder {
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input:-ms-input-placeholder {
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::-ms-input-placeholder {
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .hotels-search__input::placeholder {
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-weight: bold;
   text-transform: uppercase;
@@ -923,8 +902,6 @@ body {
   margin: 0;
 
   width: 50%;
-
-
 }
 
 .hotel-search__person-category .hotel-search__label {
@@ -966,6 +943,7 @@ body {
   height: 12px;
 
   font-size: 0;
+  font-weight: bold;
 
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -1013,14 +991,14 @@ body {
 
 .hotel-search__adult-value--plus:hover::before, 
 .hotel-search__child-value--plus:hover::before {
-  color: #000000;
+  color: #000000000;
 
   transition-duration: 0.3s;
 }
 
 .hotel-search__adult-value--plus:focus::before, 
 .hotel-search__child-value--plus:focus::before {
-  color: #000000;
+  color: #000000000;
 }
 
 .hotel-search__adult-value--plus:active::before, 
@@ -1034,14 +1012,14 @@ body {
 
 .hotel-search__adult-value--minus:hover::before, 
 .hotel-search__child-value--minus:hover::before {
-  color: #000000;
+  color: #000000000;
 
   transition-duration: 0.3s;
 }
 
 .hotel-search__adult-value--minus:focus::before, 
 .hotel-search__child-value--minus:focus::before {
-  color: #000000;
+  color: #000000000;
 }
 
 .hotel-search__adult-value--minus:active::before, 
@@ -1396,7 +1374,7 @@ body {
 .filter__submit:hover {
   background-color: rgb(255,255,255);
 
-  color: #000;
+  color: #000000;
   transition-duration: 0.4s;
 }
 
@@ -1404,7 +1382,7 @@ body {
   outline: 1px dotted rgb(255,255,255);
   outline-offset: 4px;
   background-color: rgb(255,255,255);
-  color: #000;
+  color: #000000;
 
   transition-duration: 0.4s;
 }
@@ -1437,7 +1415,7 @@ body {
   font-family: "PT Sans";
   font-size: 21px;
   font-weight: bold;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   margin-right: 50px;
 }
@@ -1450,7 +1428,7 @@ body {
 
 .sort__caption {
   font-size: 12px;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -1500,7 +1478,7 @@ body {
 }
 
 .sort__link:active {
-  color: #000;
+  color: #000000;
 
   transition: ease 0.3s;
 }
@@ -1625,7 +1603,7 @@ body {
   padding-top: 2px;
   margin: 0;
 
-  color: #000;
+  color: #000000;
   font-family: "PT Sans";
   font-size: 21px;
   font-weight: bold;
@@ -1742,7 +1720,7 @@ body {
 
   background-color: #f2f2f2;
 
-  color: #666;
+  color: #666666;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1799,7 +1777,7 @@ body {
   margin-left: 61px;
   margin-bottom: 4px;
 
-  color: #000;
+  color: #000000;
   font-size: 21px;
   font-family: "PT Sans";
   font-weight: bold;
