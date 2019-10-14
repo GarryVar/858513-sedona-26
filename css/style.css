@@ -680,8 +680,10 @@ body {
 
 
 .hotel-search--error {
-  animation-name: form_error;
-  animation-duration: 0.3s;
+  -webkit-animation-name: form_error;
+          animation-name: form_error;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 
 
@@ -700,6 +702,30 @@ body {
   }
   to {
     transform: translateY(0px) translateX(-50%);
+  }
+}
+
+@-webkit-keyframes form_error {
+  0%,
+  100% {
+    transform: rotate(0) translateX(-50%);
+    transform-origin: 0 50% 0;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+     transform: rotate(-1deg) translateX(-50%);
+     transform-origin: 0 50% 0;
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+      transform: rotate(1deg) translateX(-50%);
+      transform-origin: 0 50% 0;
   }
 }
 

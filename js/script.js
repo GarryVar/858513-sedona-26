@@ -70,12 +70,12 @@ window.addEventListener("keydown", function (event) {
 
   if (event.keyCode === 27) {
 
-    if (searchHotel.classList.contains("hotel-search--hide")) {
+    if (searchHotel.classList.contains("hotel-search")) {
 
       event.preventDefault();
 
-      searchHotel.classList.remove("hotel-search--hide");
-      searchHotel.classList.add("hotel-search");
+      searchHotel.classList.add("hotel-search--hide");
+      searchHotel.classList.remove("hotel-search");
       earchHotel.classList.remove('hotel-search--error');
       
     }
