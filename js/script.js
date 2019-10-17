@@ -39,7 +39,7 @@ searchBtn.addEventListener("click", function (event) {
   searchHotel.classList.remove('hotel-search--error');
 
   if (storage) {
-    inputEntry.value = storage;
+    inputadult.value = storage;
   }
 });
 
