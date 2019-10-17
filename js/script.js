@@ -22,7 +22,7 @@ var summChild = "";
 
 try {
 
-  storage = isStorageSupport.getItem("adult", "child");
+  storage = isStorageSupport.getItem("entry","out","adult","child");
 }
 
 catch (err) {
@@ -40,6 +40,10 @@ searchBtn.addEventListener("click", function (event) {
 
   if (storage) {
     inputEntry.value = storage;
+    inputOut.value = storage;
+
+    inputAdult.value = storage;
+    inputChild.value = storage;
   }
 });
 
@@ -58,7 +62,12 @@ searchHotel.addEventListener("submit", function (event) {
 
   else {
      if (isStorageSupport) {
-        localStorage.setItem("login", login.value);
+
+        localStorage.setItem("entry", inputEntry.value);
+        localStorage.setItem("out", inputOut.value);
+
+        localStorage.setItem("adult", inputAdult.value);
+        localStorage.setItem("child", inputChild.value);
       }
     
   }
@@ -132,5 +141,16 @@ btnMinusChild.addEventListener("click", function(event) {
   }
 
 });
+
+
+var navMenu = document.querySelector(".main-nav__list");
+
+var navList =  navMenu.children;
+
+
+console.log(navMenu);
+console.log(navList);
+
+
 
 
