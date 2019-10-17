@@ -144,15 +144,3 @@ btnMinusChild.addEventListener("click", function(event) {
 
 });
 
-
-var navMenu = document.querySelector(".main-nav__list");
-
-var navList =  navMenu.children;
-
-
-console.log(navMenu);
-console.log(navList);
-
-
-
-
