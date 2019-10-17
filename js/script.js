@@ -39,11 +39,13 @@ searchBtn.addEventListener("click", function (event) {
   searchHotel.classList.remove('hotel-search--error');
 
   if (storage) {
+
     inputEntry.value = storage;
     inputOut.value = storage;
 
     inputAdult.value = storage;
     inputChild.value = storage;
+
   }
 });
 
