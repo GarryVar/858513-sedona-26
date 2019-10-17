@@ -36,7 +36,7 @@ searchBtn.addEventListener("click", function (event) {
 
   searchHotel.classList.toggle("hotel-search");
   searchHotel.classList.toggle("hotel-search--hide");
-  searchHotel.classList.remove('hotel-search--error');
+  searchHotel.classList.remove("hotel-search--error");
 
   if (storage) {
 
@@ -57,9 +57,9 @@ searchHotel.addEventListener("submit", function (event) {
 
     inputEntry.focus(); 
     
-    searchHotel.classList.remove('hotel-search--error');
+    searchHotel.classList.remove("hotel-search--error");
     searchHotel.offsetWidth =  searchHotel.offsetWidth;
-    searchHotel.classList.add('hotel-search--error');
+    searchHotel.classList.add("hotel-search--error");
   }
 
   else {
@@ -87,7 +87,7 @@ window.addEventListener("keydown", function (event) {
 
       searchHotel.classList.add("hotel-search--hide");
       searchHotel.classList.remove("hotel-search");
-      earchHotel.classList.remove('hotel-search--error');
+      earchHotel.classList.remove("hotel-search--error");
       
     }
   }
