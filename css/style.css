@@ -117,6 +117,8 @@ body {
   margin: 0;
   padding: 0;
 
+  min-height: 56px;
+
   list-style: none;
   z-index: 2;
 }
@@ -140,7 +142,6 @@ body {
 .main-nav__link {
   display: inline-block;
 
-  padding: 20px 0;
 
   vertical-align: middle;
 
@@ -246,7 +247,7 @@ body {
 }
 
 .features__item--type-1 .features__content {
-  padding: 50px 0;
+  padding: 47px 0;
   width: 100%;
   background-color: #81b3d2;
   text-align: center;
@@ -317,7 +318,7 @@ body {
   position: relative;
 
   padding-top: 161px;
-  padding-bottom: 80px;
+  padding-bottom: 83px;
 
   width: 33%;
 }
@@ -440,7 +441,7 @@ body {
   position: relative;
 
   width: 33%;
-  padding-top: 50px;
+  padding-top: 48px;
   padding-bottom: 60px;
 
   background-color: #eeeeee;
@@ -457,6 +458,7 @@ body {
   margin-bottom: 29px;
 
   color: #000000;
+  line-height: 21px;
   font-family: "PT Sans";
   font-size: 21px;
   text-align: center;
@@ -469,7 +471,7 @@ body {
 }
 
 .features__item--type-3 .features__text {
-  margin-top: 15px;
+  margin-top: 19px;
   margin-bottom: 0;
 
   font-family: "PT Sans";
@@ -485,10 +487,12 @@ body {
   display: inline-block;
   vertical-align: middle;
 
-  bottom: 11px;
+  bottom: 5px;
+
   padding: 0 12px;
 
   color: #333;
+  font-size: 14px;
 }
 
 .features__item--type-3 .features__number::before {
@@ -555,7 +559,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 
-  line-height: 20px;
+  line-height: 26px;
 }
 
 .button--search {
@@ -563,7 +567,7 @@ body {
 
   display: inline-block;
 
-  margin-top: 47px;
+  margin-top: 34px;
   padding-left: 140px;
   padding-right: 140px;
   padding-top: 33px;
@@ -639,6 +643,7 @@ body {
 
   width: 570px;
   padding: 55px;
+/*   padding-bottom:  63px; */
 
   background-color: rgb(255,255,255);
   box-shadow: 0 0 20px 0px #838282;
@@ -774,7 +779,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
-  margin-bottom: 29px;
+  margin-bottom: 33px;
 }
 
 .hotel-search__date,
@@ -786,6 +791,8 @@ body {
   white-space: nowrap;
 
   width: 100%;
+
+  font-size: 14px;
 
   cursor: pointer;
 }
@@ -824,11 +831,11 @@ body {
 
   width: 100%;
 
+  font-size: 14px;
   font-weight: bold;
+  text-transform: uppercase;
 
   background-color: #f2f2f2;
-
-  font-weight: bold;
   
   cursor: pointer;
   transition-duration: 0.3s;
@@ -898,7 +905,7 @@ body {
   display: flex;
   align-content: center;
 
-  margin-bottom:  53px;
+  margin-bottom:  54px;
 }
 
 .hotel-search__person-category {
@@ -1085,7 +1092,7 @@ body {
 
   color: rgb(255,255,255);
   font-family: "PT Sans";
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
