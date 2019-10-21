@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: bold;
   src: url("../fonts/ptsansbold.woff2") format("woff2"),
-       url("../fonts/ptsansbold.woff") format("woff");
+       url("../fonts/ptsansbold.woff") format("woff"); 
 }
 
 html {
@@ -807,7 +807,7 @@ body {
 
 .hotel-search__calendar:hover svg, 
 .hotel-search__calendar:focus svg {
-  fill: #000000000;
+  fill: #000000;
 }
 
 .hotel-search__calendar:active svg {
@@ -1000,14 +1000,14 @@ body {
 
 .hotel-search__adult-value--plus:hover::before, 
 .hotel-search__child-value--plus:hover::before {
-  color: #000000000;
+  color: #000000;
 
   transition-duration: 0.3s;
 }
 
 .hotel-search__adult-value--plus:focus::before, 
 .hotel-search__child-value--plus:focus::before {
-  color: #000000000;
+  color: #000000;
 }
 
 .hotel-search__adult-value--plus:active::before, 
@@ -1021,14 +1021,14 @@ body {
 
 .hotel-search__adult-value--minus:hover::before, 
 .hotel-search__child-value--minus:hover::before {
-  color: #000000000;
+  color: #000000;
 
   transition-duration: 0.3s;
 }
 
 .hotel-search__adult-value--minus:focus::before, 
 .hotel-search__child-value--minus:focus::before {
-  color: #000000000;
+  color: #000000;
 }
 
 .hotel-search__adult-value--minus:active::before, 
