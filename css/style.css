@@ -204,6 +204,12 @@ body {
 }
 
 .features__text.features__text--big {
+  max-width: 460px;
+
+  margin:0;
+  margin-left: auto;
+  margin-right: auto;
+
   font-family: "PT Sans";
   font-size: 21px;
   font-weight: bold;
@@ -1446,12 +1452,13 @@ body {
 }
 
 .sort__text {
+  margin-right: 50px;
+  
   font-family: "PT Sans";
   font-size: 21px;
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
-  margin-right: 50px;
 }
 
 .sort__wrap {
