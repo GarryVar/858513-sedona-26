@@ -561,6 +561,7 @@ body {
 
 .search__text--big {
   margin-top: 51px;
+  margin-bottom: 22px;
 
   font-family: "PT Sans";
   font-size: 30px;
@@ -579,11 +580,13 @@ body {
 
   display: inline-block;
 
-  margin-top: 44px;
+  margin-top: 52px;
+  margin-bottom: -2px;
+
   padding-left: 140px;
   padding-right: 140px;
-  padding-top: 27px;
-  padding-bottom:  35px;
+  padding-top: 30px;
+  padding-bottom:  30px;
 
   border: none;
   vertical-align: middle;
@@ -654,8 +657,8 @@ body {
   left: 50%;
 
   width: 570px;
-  padding: 55px;
-/*   padding-bottom:  63px; */
+  padding: 60px 55px;
+  padding-bottom:  54px; 
 
   background-color: rgb(255,255,255);
   box-shadow: 0 0 20px 0px #838282;
@@ -791,7 +794,7 @@ body {
   justify-content: space-between;
 
   width: 100%;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .hotel-search__date,
@@ -917,7 +920,7 @@ body {
   display: flex;
   align-content: center;
 
-  margin-bottom:  54px;
+  margin-bottom:  55px;
 }
 
 .hotel-search__person-category {
