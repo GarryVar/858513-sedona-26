@@ -30,6 +30,15 @@ catch (err) {
   isStorageSupport = false;
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+   if(searchHotel.classList.contains("hotel-search")) {
+      searchHotel.classList.toggle("hotel-search--hide");
+      searchHotel.classList.toggle("hotel-search");
+   }
+
+});
+
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
 

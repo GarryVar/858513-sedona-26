@@ -105,7 +105,6 @@ body {
   z-index: 3;
 }
 
-
 .main-nav__list {
   position: relative;
 
@@ -115,9 +114,8 @@ body {
   align-items: center;
 
   margin: 0;
-  padding: 0;
+  padding: 19px 0;
 
-  min-height: 56px;
 
   list-style: none;
   z-index: 2;
@@ -853,10 +851,8 @@ body {
   background-color: #f2f2f2;
   
   cursor: pointer;
-  transition-duration: 0.3s;
-  transition-property: background-color;
-}
 
+}
 
 .hotel-search__input:focus {
   outline: 1px dotted #222222;
@@ -865,20 +861,15 @@ body {
   box-shadow: 0 0 0 2px #e5e5e5;
 }
 
+.hotel-search__input:active {
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+
 .hotel-search__input:hover {
   background-color: #ebebeb;
 
   cursor: pointer;
-  transition-duration: 0.3s;
-  transition-property: background-color;
-}
-
-.hotel-search__input:active {
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0 0 2px #e5e5e5;
-
-  transition-duration: 0.3s;
-  transition-property: background-color;
 }
 
 .hotels-search__input::-webkit-input-placeholder {
@@ -961,6 +952,13 @@ body {
 .hotel-search__person-category .hotel-search__input[name="child"] {
   margin: 0;
   margin-left: 27px;
+}
+
+.hotel-search__person-category .hotel-search__input:focus {
+  outline: 1px dotted #222222;
+  outline-offset: 4px;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0 0 2px #e5e5e5;
 }
  
 .hotel-search__adult-value,
