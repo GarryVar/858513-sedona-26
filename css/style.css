@@ -868,6 +868,7 @@ body {
 .hotel-search__input:focus {
   outline: 1px dotted #222222;
   outline-offset: 4px;
+
   background-color: rgb(255,255,255);
   box-shadow: 0 0 0 2px #e5e5e5;
 }
@@ -971,7 +972,7 @@ body {
   background-color: rgb(255,255,255);
   box-shadow: 0 0 0 2px #e5e5e5;
 }
- 
+
 .hotel-search__adult-value,
 .hotel-search__child-value{
   position: absolute;
@@ -1068,6 +1069,20 @@ body {
 
   transition-duration: 0.3s;
   transition-property: background-color;
+}
+
+.hotel-search__adult-value:focus~.hotel-search__label .hotel-search__input {
+  outline: 1px dotted #222222;
+  outline-offset: 4px;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+
+.hotel-search__child-value:focus~.hotel-search__label .hotel-search__input {
+  outline: 1px dotted #222222;
+  outline-offset: 4px;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0 0 2px #e5e5e5;
 }
 
 .hotel-search__submit {
