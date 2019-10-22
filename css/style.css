@@ -559,7 +559,7 @@ body {
 
 .search__text--big {
   margin-top: 51px;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   font-family: "PT Sans";
   font-size: 30px;
@@ -578,7 +578,7 @@ body {
 
   display: inline-block;
 
-  margin-top: 52px;
+  margin-top: 49px;
   margin-bottom: -2px;
 
   padding-left: 140px;
