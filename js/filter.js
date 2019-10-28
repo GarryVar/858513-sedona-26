@@ -6,6 +6,17 @@ var filterPriceMax = filterForm.querySelector("[name=max-price]");
 
 var filterCheckbox = filterForm.querySelectorAll("[type=checkbox]");
 
+var isStorageSupport = true;
+var storage = "";
+
+try {
+	storage = isStorageSupport.getItem("filterPriceMin","filterPriceMax","filterCheckbox")
+}
+catch (err) {
+
+	isStorageSupport = false;
+}
+
 
 	filterForm.addEventListener("submit", function(event) {
 
@@ -16,12 +27,8 @@ var filterCheckbox = filterForm.querySelectorAll("[type=checkbox]");
 			} 
 			else {
 
-				console.log("Стоимость от " + filterPriceMin.value + " рублей.");
-				console.log("Стоимость до " + filterPriceMax.value + " рублей.");
-
-				for(var i = 0; i < filterCheckbox.length; i++) {
-					console.log(filterCheckbox[i].checked  && filterCheckbox[i].name);
-
-				}		
+					localStorage.setItem("fliterPriceMin", fliterPriceMin.value);
+					localStorage.setItem("fliterPriceMax", fliterPriceMax.value);
+					localStorage.setItem("fliterCheckbox", fliterCheckbox.value);
 			}
 	});

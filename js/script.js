@@ -14,11 +14,11 @@ var btnMinusAdult = searchHotel.querySelector(".hotel-search__adult-value--minus
 var btnPlusChild = searchHotel.querySelector(".hotel-search__child-value--plus");
 var btnMinusChild = searchHotel.querySelector(".hotel-search__child-value--minus");
 
-var isStorageSupport = true;
-var storage = "";
-
 var summAdult = "";
 var summChild = "";
+
+var isStorageSupport = true;
+var storage = "";
 
 try {
 
@@ -47,15 +47,6 @@ searchBtn.addEventListener("click", function (event) {
   searchHotel.classList.toggle("hotel-search--hide");
   searchHotel.classList.remove("hotel-search--error");
 
-  if (storage) {
-
-    inputEntry.value = storage;
-    inputOut.value = storage;
-
-    inputAdult.value = storage;
-    inputChild.value = storage;
-
-  }
 });
 
 
@@ -72,15 +63,12 @@ searchHotel.addEventListener("submit", function (event) {
   }
 
   else {
-     if (isStorageSupport) {
 
         localStorage.setItem("entry", inputEntry.value);
         localStorage.setItem("out", inputOut.value);
 
         localStorage.setItem("adult", inputAdult.value);
-        localStorage.setItem("child", inputChild.value);
-      }
-    
+        localStorage.setItem("child", inputChild.value); 
   }
 
 
@@ -153,3 +141,15 @@ btnMinusChild.addEventListener("click", function(event) {
 
 });
 
+
+var countElems = function () {
+    images = document.querySelectorAll('img');
+
+    imagesObj = {};
+    imagesObj.img = images;
+
+    console.log(imagesObj);
+
+};
+
+countElems();
