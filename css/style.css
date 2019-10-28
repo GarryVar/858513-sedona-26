@@ -47,10 +47,12 @@ body {
 .visually-hidden {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
   margin: -1px;
   padding: 0;
+  
+  width: 1px;
+  height: 1px;
+
   overflow: hidden;
 
   border: none;
@@ -971,6 +973,10 @@ body {
   outline-offset: 4px;
   background-color: rgb(255,255,255);
   box-shadow: 0 0 0 2px #e5e5e5;
+}
+
+.hotel-search__person-category .hotel-search__input:hover {
+background-color: #ebebeb;
 }
 
 .hotel-search__adult-value,
