@@ -31,7 +31,8 @@ catch (err) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
+
    if(searchHotel.classList.contains("hotel-search")) {
       searchHotel.classList.toggle("hotel-search--hide");
       searchHotel.classList.toggle("hotel-search");
@@ -39,9 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
 searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
-
 
   searchHotel.classList.toggle("hotel-search");
   searchHotel.classList.toggle("hotel-search--hide");
@@ -51,11 +52,11 @@ searchBtn.addEventListener("click", function (event) {
 
     inputEntry.value = storage;
     inputOut.value = storage;
-
     inputAdult.value = storage;
     inputChild.value = storage;
 
   }
+
 });
 
 
@@ -72,17 +73,13 @@ searchHotel.addEventListener("submit", function (event) {
   }
 
   else {
-     if (isStorageSupport) {
 
         localStorage.setItem("entry", inputEntry.value);
         localStorage.setItem("out", inputOut.value);
 
         localStorage.setItem("adult", inputAdult.value);
         localStorage.setItem("child", inputChild.value);
-      }
-    
   }
-
 
 });
 
@@ -152,4 +149,5 @@ btnMinusChild.addEventListener("click", function(event) {
   }
 
 });
+
 
