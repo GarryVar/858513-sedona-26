@@ -14,11 +14,11 @@ var btnMinusAdult = searchHotel.querySelector(".hotel-search__adult-value--minus
 var btnPlusChild = searchHotel.querySelector(".hotel-search__child-value--plus");
 var btnMinusChild = searchHotel.querySelector(".hotel-search__child-value--minus");
 
-var isStorageSupport = true;
-var storage = "";
-
 var summAdult = "";
 var summChild = "";
+
+var isStorageSupport = true;
+var storage = "";
 
 try {
 
@@ -149,5 +149,3 @@ btnMinusChild.addEventListener("click", function(event) {
   }
 
 });
-
-
