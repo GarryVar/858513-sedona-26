@@ -31,7 +31,7 @@ catch (err) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
    if(searchHotel.classList.contains("hotel-search")) {
       searchHotel.classList.toggle("hotel-search--hide");
       searchHotel.classList.toggle("hotel-search");
@@ -143,7 +143,7 @@ btnMinusChild.addEventListener("click", function(event) {
 
 
 var countElems = function () {
-    images = document.querySelectorAll('img');
+    images = document.querySelectorAll("img");
 
     imagesObj = {};
     imagesObj.img = images;
