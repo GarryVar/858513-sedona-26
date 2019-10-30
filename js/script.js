@@ -81,7 +81,6 @@ window.addEventListener("keydown", function (event) {
     if (searchHotel.classList.contains("hotel-search")) {
 
       event.preventDefault();
-
       searchHotel.classList.add("hotel-search--hide");
       searchHotel.classList.remove("hotel-search");
       earchHotel.classList.remove("hotel-search--error");
@@ -141,15 +140,3 @@ btnMinusChild.addEventListener("click", function(event) {
 
 });
 
-
-var countElems = function () {
-    images = document.querySelectorAll("img");
-
-    imagesObj = {};
-    imagesObj.img = images;
-
-    console.log(imagesObj);
-
-};
-
-countElems();
