@@ -550,7 +550,7 @@ body {
   position: relative;
 
   width: 100%;
-  min-height: 596px;
+  min-height: 602px;
 
   overflow: hidden;
 }
@@ -669,7 +669,7 @@ body {
   left: 50%;
 
   width: 570px;
-  padding: 60px 55px;
+  padding: 63px 55px;
   padding-bottom:  54px; 
 
   background-color: rgb(255,255,255);
@@ -1809,7 +1809,7 @@ background-color: #ebebeb;
 
   vertical-align: middle;
 
-  height: 17px;
+  height: 20px;
   width: 18px;
 
   font-size: 0;
